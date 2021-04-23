@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
-import { getAllPaints, getPaintById } from "../../modules/PaintManager";
+import React, { useEffect, useState } from "react";
+import { getAllPaints } from "../../modules/PaintManager";
+import { PaintCard } from "./PaintCard";
 
 export const PaintList = () => {
+    const [paints, setPaints] = useState([]);
+
     const getPaints = () => {
         return getAllPaints().then(paintsfromAPI => {
-            console.log(paintsfromAPI)
+            setPaints(paintsfromAPI)
         });
     };
 
@@ -14,7 +17,7 @@ export const PaintList = () => {
 
     return (
         <div className="container-cards">
-            We'll put some paints here soon...
+            {paints.map(paint => <PaintCard key={paint.id} paint={paint} />)}
         </div>
     )
 }

@@ -11,20 +11,22 @@
         {
             "id": 1,
             "name": "Naval",
-            "genColorId": 5,
+            "gencolorId": 5,
             "image": "",
-            "brand": "Sherwin-Williams"
+            "brand": "Sherwin-Williams",
+            "price": ""
         },
         {
             "id": 2,
             "name": "Java",
-            "genColorId": 8,
+            "gencolorId": 8,
             "image": "",
-            "brand": "Sherwin-Williams"
+            "brand": "Sherwin-Williams",
+            "price": ""
         }
     ],
     "carpets": [],
-    "genColors": [
+    "gencolors": [
         {
             "id": 1,
             "name": "red"

@@ -9,6 +9,6 @@ export const getPaintById = (paintId) => {
 
 //fetch call that gets all paints
 export const getAllPaints = () => {
-    return fetch(`${remoteURL}/paints`)
+    return fetch(`${remoteURL}/paints?_expand=gencolor`)
         .then(res => res.json())
 }
