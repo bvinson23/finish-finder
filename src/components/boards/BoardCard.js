@@ -11,7 +11,7 @@ export const BoardCard = () => {
                     <div className="paint-details">
                         <h3>Paint Name</h3>
                         <p>Color</p>
-                        <p>Style</p>
+                        <p>Brand</p>
                         <p>Price</p>
                     </div>
                 </article>
