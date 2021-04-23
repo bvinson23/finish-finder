@@ -1,6 +1,6 @@
 import React from "react";
 import { ApplicationViews } from "./ApplicationViews";
-import "./Finish-Finder.css";
+import "./FinishFinder.css";
 
 export const FinishFinder = () => {
   return (
