@@ -7,9 +7,62 @@
         }
     ],
     "bases": [],
-    "paints": [],
+    "paints": [
+        {
+            "id": 1,
+            "name": "Naval",
+            "genColorId": 5,
+            "image": "",
+            "brand": "Sherwin-Williams"
+        }
+    ],
     "carpets": [],
-    "genColors": [],
+    "genColors": [
+        {
+            "id": 1,
+            "name": "red"
+        },
+        {
+            "id": 2,
+            "name": "orange"
+        },
+        {
+            "id": 3,
+            "name": "yellow"
+        },
+        {
+            "id": 4,
+            "name": "green"
+        },
+        {
+            "id": 5,
+            "name": "blue"
+        },
+        {
+            "id": 6,
+            "name": "violet"
+        },
+        {
+            "id": 7,
+            "name": "black"
+        },
+        {
+            "id": 8,
+            "name": "brown"
+        },
+        {
+            "id": 9,
+            "name": "grey"
+        },
+        {
+            "id": 10,
+            "name": "white"
+        },
+        {
+            "id": 11,
+            "name": "beige"
+        }
+    ],
     "styles": [],
     "boards": []
 }
