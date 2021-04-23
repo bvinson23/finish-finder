@@ -1,11 +1,16 @@
 import React from "react";
 import { ApplicationViews } from "./ApplicationViews";
+import { BoardCard } from "./boards/BoardCard";
 import "./FinishFinder.css";
 
 export const FinishFinder = () => {
   return (
     <>
-      <ApplicationViews />
+      <h2>Boards</h2>
+      <article className="boards">
+        <BoardCard />
+        <BoardCard />
+      </article>
     </>
   )
 }
