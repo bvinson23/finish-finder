@@ -6,7 +6,7 @@ export const ApplicationViews = () => {
     return (
         <>
             {/*Render the board list when http://lcoalhost:3000/ */}
-            <Route path="/">
+            <Route exact path="/">
                 <BoardList />
             </Route>
         </>
