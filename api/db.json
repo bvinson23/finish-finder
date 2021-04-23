@@ -12,7 +12,7 @@
             "id": 1,
             "name": "Naval",
             "gencolorId": 5,
-            "image": "",
+            "image": "../src/components/paints/paintImages/colorNaval",
             "brand": "Sherwin-Williams",
             "price": ""
         },

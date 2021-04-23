@@ -1,5 +1,6 @@
 import React from "react";
 import "./Paint.css";
+import colorNaval from "./paintImages/colorNaval"
 
 export const PaintCard = ({ paint }) => {
     return (
@@ -9,11 +10,10 @@ export const PaintCard = ({ paint }) => {
                 <section className="paint">
                     <h3>Name: {paint.name}</h3>
                     <p>Color: {paint.gencolor.name}</p>
-                    <p>Price: ${paint.price}</p>
                     <p>Brand: {paint.brand}</p>
                 </section>
                 <div className="image-container">
-                    <img src="" alt="paint"></img>
+                    <img src={paint.image} alt={paint.name}></img>
                 </div>
             </div>
         </>
