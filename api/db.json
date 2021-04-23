@@ -1,0 +1,15 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Brandon Vinson",
+            "email": "brandon@home.com"
+        }
+    ],
+    "bases": [],
+    "paints": [],
+    "carpets": [],
+    "genColors": [],
+    "styles": [],
+    "boards": []
+}
