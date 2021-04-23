@@ -14,6 +14,13 @@
             "genColorId": 5,
             "image": "",
             "brand": "Sherwin-Williams"
+        },
+        {
+            "id": 2,
+            "name": "Java",
+            "genColorId": 8,
+            "image": "",
+            "brand": "Sherwin-Williams"
         }
     ],
     "carpets": [],
