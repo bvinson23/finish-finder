@@ -1,5 +1,10 @@
 import React from "react";
+import { BoardCard } from "./BoardCard";
 
 export const BoardList = () => {
-    return null
+    return (
+        <div className="container-cards">
+            We'll add boards eventually...
+        </div>
+    )
 }
