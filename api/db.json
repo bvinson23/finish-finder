@@ -6,25 +6,59 @@
             "email": "brandon@home.com"
         }
     ],
-    "bases": [],
+    "bases": [
+        {
+            "id": 1,
+            "name": "Traditional Vinyl 1/8",
+            "gencolorId": "8",
+            "brand": "Tarkett",
+            "image": ""
+        },
+        {
+            "id": 2,
+            "name": "",
+            "gencolorId": "1",
+            "brand": "Roppe",
+            "image": ""
+        }
+    ],
     "paints": [
         {
             "id": 1,
             "name": "Naval",
-            "genColorId": 5,
-            "image": "",
+            "gencolorId": 5,
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619454580/colorNaval_yeq21c.png",
             "brand": "Sherwin-Williams"
         },
         {
             "id": 2,
             "name": "Java",
-            "genColorId": 8,
-            "image": "",
+            "gencolorId": 8,
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619454569/colorJava_hny5nb.png",
             "brand": "Sherwin-Williams"
         }
     ],
-    "carpets": [],
-    "genColors": [
+    "carpets": [
+        {
+            "id": 1,
+            "name": "Accent Flannel",
+            "gencolorId": 9,
+            "brand": "Interface",
+            "image": "",
+            "price": "",
+            "styleId": 2
+        },
+        {
+            "id": 2,
+            "name": "",
+            "gencolorId": 4,
+            "brand": "",
+            "image": "",
+            "price": "",
+            "styleId": 3
+        }
+    ],
+    "gencolors": [
         {
             "id": 1,
             "name": "red"
@@ -70,6 +104,23 @@
             "name": "beige"
         }
     ],
-    "styles": [],
+    "styles": [
+        {
+            "id": 1,
+            "name": "solid/texture"
+        },
+        {
+            "id": 2,
+            "name": "linear"
+        },
+        {
+            "id": 3,
+            "name": "organic"
+        },
+        {
+            "id": 4,
+            "name": "geometric"
+        }
+    ],
     "boards": []
 }
