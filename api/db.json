@@ -85,6 +85,23 @@
             "name": "beige"
         }
     ],
-    "styles": [],
+    "styles": [
+        {
+            "id": 1,
+            "name": "solid/texture"
+        },
+        {
+            "id": 2,
+            "name": "linear"
+        },
+        {
+            "id": 3,
+            "name": "organic"
+        },
+        {
+            "id": 4,
+            "name": "geometric"
+        }
+    ],
     "boards": []
 }
