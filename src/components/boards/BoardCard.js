@@ -7,33 +7,33 @@ export const BoardCard = ({ board }) => {
             <h2>Board Title</h2>
             <section className="board">
                 <article className="board-carpet">
-                    <img src="" alt="carpet picture"></img>
+                    <img src={board.carpet.image} alt={board.carpet.name}></img>
                     <div className="carpet-details">
-                        <h3>Carpet Name</h3>
-                        <p>Color</p>
-                        <p>Brand</p>
-                        <p>Price</p>
+                        <h3>{board.carpet.name}</h3>
+                        <p></p>
+                        <p>{board.carpet.brand}</p>
+                        <p>${board.carpet.price}</p>
                         <p>Style</p>
                     </div>
                 </article>
             </section>
             <section className="board">
                 <article className="board-paint">
-                    <img src="" alt="paint picture"></img>
+                    <img src={board.paint.image} alt={board.paint.name}></img>
                     <div className="paint-details">
-                        <h3>Paint Name</h3>
+                        <h3>{board.paint.name}</h3>
                         <p>Color</p>
-                        <p>Brand</p>
+                        <p>{board.paint.brand}</p>
                     </div>
                 </article>
             </section>
             <section className="board">
                 <article className="board-base">
-                    <img src="" alt="base picture"></img>
+                    <img src={board.base.image} alt={board.base.name}></img>
                     <div className="base-details">
-                        <h3>Base Name</h3>
+                        <h3>{board.base.name}</h3>
                         <p>Color</p>
-                        <p>Brand</p>
+                        <p>{board.base.brand}</p>
                     </div>
                 </article>
             </section>

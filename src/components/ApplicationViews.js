@@ -4,6 +4,8 @@ import { BoardList } from "./boards/BoardList";
 import { PaintList } from "./paints/PaintList";
 import { BaseList } from "./bases/BaseList";
 import { CarpetList } from "./carpets/CarpetList";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
 
 export const ApplicationViews = () => {
     return (
@@ -26,6 +28,12 @@ export const ApplicationViews = () => {
             {/*Render the carpet list when http://lcoalhost:3000/carpets */}
             <Route path="/carpets">
                 <CarpetList />
+            </Route>
+
+            {/*Render the login/register page when http://localhost:3000/login */}
+            <Route path="/login">
+                <Login />
+                <Register />
             </Route>
         </>
     )
