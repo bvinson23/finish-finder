@@ -12,7 +12,7 @@ export const PaintCard = ({ paint }) => {
                     <p>Brand: {paint.brand}</p>
                 </section>
                 <div className="image-container">
-                    <img src="" alt={paint.name}></img>
+                    <img src={paint.image} alt={paint.name}></img>
                 </div>
             </div>
         </>

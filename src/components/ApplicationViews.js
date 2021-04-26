@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import { BoardList } from "./boards/BoardList";
 import { PaintList } from "./paints/PaintList";
 import { BaseList } from "./bases/BaseList";
+import { CarpetList } from "./carpets/CarpetList";
 
 export const ApplicationViews = () => {
     return (
@@ -20,6 +21,11 @@ export const ApplicationViews = () => {
             {/*Render the base list when http://lcoalhost:3000/bases */}
             <Route path="/bases">
                 <BaseList />
+            </Route>
+            
+            {/*Render the carpet list when http://lcoalhost:3000/carpets */}
+            <Route path="/carpets">
+                <CarpetList />
             </Route>
         </>
     )

@@ -27,14 +27,14 @@
             "id": 1,
             "name": "Naval",
             "gencolorId": 5,
-            "image": "/colorNaval",
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619454580/colorNaval_yeq21c.png",
             "brand": "Sherwin-Williams"
         },
         {
             "id": 2,
             "name": "Java",
             "gencolorId": 8,
-            "image": "/colorJava",
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619454569/colorJava_hny5nb.png",
             "brand": "Sherwin-Williams"
         }
     ],

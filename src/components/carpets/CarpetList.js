@@ -7,7 +7,7 @@ export const CarpetList = () => {
 
     const getCarpets = () => {
         return getAllCarpets().then(carpetsfromAPI => {
-            setBases(carpetsfromAPI)
+            setCarpets(carpetsfromAPI)
         });
     };
 
