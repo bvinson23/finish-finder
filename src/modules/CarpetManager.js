@@ -9,6 +9,6 @@ export const getCarpetById = (carpetId) => {
 
 //fetch call that gets all carpets
 export const getAllCarpets = () => {
-    return fetch(`${remoteURL}/carpets?_expand=gencolor`)
+    return fetch(`${remoteURL}/carpets?_expand=gencolor&_expand=style`)
         .then(res => res.json())
 }

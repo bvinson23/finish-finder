@@ -8,7 +8,9 @@ export const CarpetCard = ({ carpet }) => {
                 <section className="carpet">
                     <h3>Name: {carpet.name}</h3>
                     <p>Color: {carpet.gencolor.name}</p>
+                    <p>Style: {carpet.style.name}</p>
                     <p>Brand: {carpet.brand}</p>
+                    <p>Price:</p>
                 </section>
                 <div className="image-container">
                     <img src="" alt={carpet.name}></img>

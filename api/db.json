@@ -38,7 +38,26 @@
             "brand": "Sherwin-Williams"
         }
     ],
-    "carpets": [],
+    "carpets": [
+        {
+            "id": 1,
+            "name": "Accent Flannel",
+            "gencolorId": 9,
+            "brand": "Interface",
+            "image": "",
+            "price": "",
+            "styleId": 2
+        },
+        {
+            "id": 2,
+            "name": "",
+            "gencolorId": 4,
+            "brand": "",
+            "image": "",
+            "price": "",
+            "styleId": 3
+        }
+    ],
     "gencolors": [
         {
             "id": 1,
