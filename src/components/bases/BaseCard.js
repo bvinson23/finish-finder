@@ -1,10 +1,9 @@
 import React from "react";
 import "./Base.css";
 
-export const PaintCard = ({ base }) => {
+export const BaseCard = ({ base }) => {
     return (
         <>
-            <h2>Vinyl Bases</h2>
             <div className="base-container">
                 <section className="base">
                     <h3>Name: {base.name}</h3>
@@ -12,7 +11,7 @@ export const PaintCard = ({ base }) => {
                     <p>Brand: {base.brand}</p>
                 </section>
                 <div className="image-container">
-                    <img src={} alt={base.name}></img>
+                    <img src="" alt={base.name}></img>
                 </div>
             </div>
         </>

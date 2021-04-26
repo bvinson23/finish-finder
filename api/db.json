@@ -6,23 +6,36 @@
             "email": "brandon@home.com"
         }
     ],
-    "bases": [],
+    "bases": [
+        {
+            "id": 1,
+            "name": "Traditional Vinyl 1/8",
+            "gencolorId": "8",
+            "brand": "Tarkett",
+            "image": ""
+        },
+        {
+            "id": 2,
+            "name": "",
+            "gencolorId": "1",
+            "brand": "Roppe",
+            "image": ""
+        }
+    ],
     "paints": [
         {
             "id": 1,
             "name": "Naval",
             "gencolorId": 5,
             "image": "/colorNaval",
-            "brand": "Sherwin-Williams",
-            "price": ""
+            "brand": "Sherwin-Williams"
         },
         {
             "id": 2,
             "name": "Java",
             "gencolorId": 8,
             "image": "/colorJava",
-            "brand": "Sherwin-Williams",
-            "price": ""
+            "brand": "Sherwin-Williams"
         }
     ],
     "carpets": [],

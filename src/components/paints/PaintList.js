@@ -17,6 +17,7 @@ export const PaintList = () => {
 
     return (
         <div className="container-cards">
+            <h2>Paints</h2>
             {paints.map(paint => <PaintCard key={paint.id} paint={paint} />)}
         </div>
     )

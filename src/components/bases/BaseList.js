@@ -17,6 +17,7 @@ export const BaseList = () => {
 
     return (
         <div className="container-cards">
+            <h2>Vinyl Bases</h2>
             {bases.map(base => <BaseCard key={base.id} base={base} />)}
         </div>
     )

@@ -5,7 +5,6 @@ import colorNaval from "./paintImages/colorNaval"
 export const PaintCard = ({ paint }) => {
     return (
         <>
-            <h2>Paints</h2>
             <div className="paint-container">
                 <section className="paint">
                     <h3>Name: {paint.name}</h3>
