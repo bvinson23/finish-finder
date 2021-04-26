@@ -7,12 +7,12 @@ export const BoardCard = ({ board }) => {
             <h2>Board Title</h2>
             <section className="board">
                 <article className="board-carpet">
-                    <img src={board.carpet.image} alt="carpet picture"></img>
+                    <img src={board.carpet.image} alt={board.carpet.name}></img>
                     <div className="carpet-details">
                         <h3>{board.carpet.name}</h3>
                         <p></p>
                         <p>{board.carpet.brand}</p>
-                        <p>Price</p>
+                        <p>${board.carpet.price}</p>
                         <p>Style</p>
                     </div>
                 </article>

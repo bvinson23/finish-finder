@@ -1,6 +1,5 @@
 import React from "react";
 import "./Paint.css";
-import colorNaval from "./paintImages/colorNaval"
 
 export const PaintCard = ({ paint }) => {
     return (

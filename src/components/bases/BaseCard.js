@@ -11,7 +11,7 @@ export const BaseCard = ({ base }) => {
                     <p>Brand: {base.brand}</p>
                 </section>
                 <div className="image-container">
-                    <img src="" alt={base.name}></img>
+                    <img src={base.image} alt={base.name}></img>
                 </div>
             </div>
         </>
