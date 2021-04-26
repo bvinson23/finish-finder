@@ -9,6 +9,6 @@ export const getBoardById = (boardId) => {
 
 //fetch call that gets all boards
 export const getAllBoards = () => {
-    return fetch(`${remoteURL}/boards`)
+    return fetch(`${remoteURL}/boards?_expand=paint&_expand=base&_expand=carpet`)
         .then(res => res.json())
 }

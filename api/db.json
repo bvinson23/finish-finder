@@ -122,5 +122,13 @@
             "name": "geometric"
         }
     ],
-    "boards": []
+    "boards": [
+        {
+            "id": 1,
+            "paintId": 1,
+            "carpetId": 1,
+            "baseId": 1,
+            "userId": 1
+        }
+    ]
 }
