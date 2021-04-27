@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { getAllBases } from "../../modules/BaseManager";
 import { getAllCarpets } from "../../modules/CarpetManager";
+import { getAllColors } from "../../modules/ColorManager";
 import { getAllPaints } from "../../modules/PaintManager";
 
 export const BoardForm = () => {
@@ -12,6 +13,7 @@ export const BoardForm = () => {
     const [paints, setPaints] = useState([]);
     const [carpets, setCarpets] = useState([]);
     const [bases, setBases] = useState([]);
+    const [colors, setColors] = useState([]);
 
     const history = useHistory();
 
@@ -45,6 +47,13 @@ export const BoardForm = () => {
                 setBases(basesFromAPI)
             });
     }, []);
+    
+    useEffect(() => {
+        getAllColors()
+            .then(colorsFromAPI => {
+                setColors(colorsFromAPI)
+            });
+    }, []);
 
     const handleClickSave = event => {
         event.preventDefault()
@@ -63,8 +72,8 @@ export const BoardForm = () => {
     }
 
     return (
-        <div className="form-container">
-            <aside className="selections">
+        <div className="form-group">
+            <aside className="selections-container">
                 <h3>Selections</h3>
                 <div className="selection__paint">
                     <h4>Paint</h4>
@@ -88,6 +97,24 @@ export const BoardForm = () => {
                     </div>
                 </div>
             </aside>
+            <div className="form-container">
+                <h4>Choose a Paint:</h4>
+                <div className="filter-dropdown">
+                    <label htmlFor="color">Color</label>
+                    <select value={paint.gencolorId}
+                        name="gencolorId"
+                        id="gencolorId"
+                        onChange={handleFieldChange}
+                        className="filter-control">
+                            <option value="0">Select a color</option>
+                            {colors.map(color => {
+                                <option key={color.id} value={color.id}>
+                                    {color.name}
+                                </option>
+                            })}
+                        </select>
+                </div>
+            </div>
         </div>
     )
 }
