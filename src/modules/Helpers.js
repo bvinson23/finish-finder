@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+//function used to listen for clicks outside an active element
 export const useDetectOutsideClick = (el, initialState) => {
   const [isActive, setIsActive] = useState(initialState);
 
