@@ -4,10 +4,32 @@
     border: 1px solid #c3c3c3;
     justify-content: center;
     align-items: center;
+    /* width: min-content; */
 }
 
 .carpet-container {
     background-color: #CFCDC8;
     display: flex;
     flex-direction: row;
+    padding-left: 15px;
+    /* padding-right: 15px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    width: auto;
+}
+
+img {
+    max-width: 200px;
+    min-height: fill;
+    height: auto;
+    width: auto;
+}
+
+.carpet {
+    padding-right: 1.5rem;
+}
+
+h3 {
+    padding-bottom: -5px;
 }
