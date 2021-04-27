@@ -1,0 +1,18 @@
+.container-cards {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #c3c3c3;
+    justify-content: center;
+    align-items: center;
+}
+
+.carpet-container {
+    background-color: #CFCDC8;
+    display: flex;
+    flex-direction: row;
+}
+
+.page-title {
+    display: flex;
+    align-self: center;
+}
