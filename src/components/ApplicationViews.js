@@ -6,6 +6,7 @@ import { BaseList } from "./bases/BaseList";
 import { CarpetList } from "./carpets/CarpetList";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
+import { BoardForm } from "./boards/BoardForm";
 
 export const ApplicationViews = () => {
     return (
@@ -13,6 +14,11 @@ export const ApplicationViews = () => {
             {/*Render the board list when http://lcoalhost:3000/ */}
             <Route exact path="/">
                 <BoardList />
+            </Route>
+
+            {/*Render the form for creating a new board when http://localhost:3000/boards/create */}
+            <Route path="/boards/create">
+                <BoardForm />
             </Route>
 
             {/*Render the paint list when http://lcoalhost:3000/paints */}

@@ -11,6 +11,7 @@ export const BoardForm = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const [paints, setPaints] = useState([]);
+    const [paint, setPaint] = useState({});
     const [carpets, setCarpets] = useState([]);
     const [bases, setBases] = useState([]);
     const [colors, setColors] = useState([]);
