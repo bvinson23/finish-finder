@@ -63,8 +63,31 @@ export const BoardForm = () => {
     }
 
     return (
-        <form className="paintForm">
-            {/* THIS IS WHERE I LEFT OFF!!!!!!!!!!!---------------------------------*/}
-        </form>
+        <div className="form-container">
+            <aside className="selections">
+                <h3>Selections</h3>
+                <div className="selection__paint">
+                    <h4>Paint</h4>
+                    <p>paint selection(placeholder)</p>
+                    <div className="selection__image">
+                        <img src="" alt="paint"></img>
+                    </div>
+                </div>
+                <div className="selection__base">
+                    <h4>Vinyl Base</h4>
+                    <p>base selection(placeholder)</p>
+                    <div className="selection__image">
+                        <img src="" alt="base"></img>
+                    </div>
+                </div>
+                <div className="selection__carpet">
+                    <h4>Carpet</h4>
+                    <p>carpet selection(placeholder)</p>
+                    <div className="selection__image">
+                        <img src="" alt="carpet"></img>
+                    </div>
+                </div>
+            </aside>
+        </div>
     )
 }
