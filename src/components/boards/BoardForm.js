@@ -3,7 +3,8 @@ import { useHistory } from "react-router";
 import { getAllBases } from "../../modules/BaseManager";
 import { getAllCarpets } from "../../modules/CarpetManager";
 import { getAllColors } from "../../modules/ColorManager";
-import { getAllPaints } from "../../modules/PaintManager";
+import { getAllPaints, getPaintById } from "../../modules/PaintManager";
+import { addBoard } from "../../modules/BoardManager";
 
 export const BoardForm = () => {
     const [board, setBoard] = useState({});
@@ -11,7 +12,7 @@ export const BoardForm = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const [paints, setPaints] = useState([]);
-    const [paint, setPaint] = useState({});
+    const [paint, setPaint] = useState({name: "", gencolorId: ""});
     const [carpets, setCarpets] = useState([]);
     const [bases, setBases] = useState([]);
     const [colors, setColors] = useState([]);
@@ -98,24 +99,6 @@ export const BoardForm = () => {
                     </div>
                 </div>
             </aside>
-            <div className="form-container">
-                <h4>Choose a Paint:</h4>
-                <div className="filter-dropdown">
-                    <label htmlFor="color">Color</label>
-                    <select value={paint.gencolorId}
-                        name="gencolorId"
-                        id="gencolorId"
-                        onChange={handleFieldChange}
-                        className="filter-control">
-                            <option value="0">Select a color</option>
-                            {colors.map(color => {
-                                <option key={color.id} value={color.id}>
-                                    {color.name}
-                                </option>
-                            })}
-                        </select>
-                </div>
-            </div>
         </div>
     )
 }
