@@ -149,6 +149,14 @@
       "carpetId": 1,
       "baseId": 1,
       "userId": 1
-    }
+    },
+    {
+        "id": 2,
+        "name": "Finish Board 2",
+        "paintId": 2,
+        "carpetId": 2,
+        "baseId": 2,
+        "userId": 1
+      }
   ]
 }
