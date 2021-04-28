@@ -17,7 +17,9 @@ export const CarpetList = () => {
 
     return (
         <div className="container-cards">
-            <h2>Carpets</h2>
+            <div className="page-title">
+                <h2>Carpets</h2>
+            </div>
             {carpets.map(carpet => <CarpetCard key={carpet.id} carpet={carpet} />)}
         </div>
     )

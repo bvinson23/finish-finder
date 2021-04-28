@@ -41,21 +41,30 @@
     "carpets": [
         {
             "id": 1,
-            "name": "Accent Flannel",
+            "name": "Bee's Knees - Dew",
             "gencolorId": 9,
             "brand": "Interface",
-            "image": "",
-            "price": "",
-            "styleId": 2
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542514/Interface-LetItBee-Dew_adbbot.png",
+            "price": 40,
+            "styleId": 4
         },
         {
             "id": 2,
-            "name": "",
-            "gencolorId": 4,
-            "brand": "",
-            "image": "",
-            "price": "",
-            "styleId": 3
+            "name": "Street Smart - Passageway",
+            "gencolorId": 7,
+            "brand": "Interface",
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542914/Interface-StreetSmart-Passageway_dp1dm9.png",
+            "price": 30,
+            "styleId": 2
+        },
+        {
+            "id": 3,
+            "name": "Open Air 401 - Linen",
+            "gencolorId": 11,
+            "brand": "Interface",
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619622075/Interface-OpenAir-401-Linen_je1oj3.png",
+            "price": 30,
+            "styleId": 1
         }
     ],
     "gencolors": [
