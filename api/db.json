@@ -56,6 +56,15 @@
             "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542914/Interface-StreetSmart-Passageway_dp1dm9.png",
             "price": 30,
             "styleId": 2
+        },
+        {
+            "id": 3,
+            "name": "Open Air 401 - Linen",
+            "gencolorId": 11,
+            "brand": "Interface",
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619622075/Interface-OpenAir-401-Linen_je1oj3.png",
+            "price": 30,
+            "styleId": 1
         }
     ],
     "gencolors": [

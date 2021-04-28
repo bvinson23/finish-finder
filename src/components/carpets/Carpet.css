@@ -1,10 +1,7 @@
 .container-cards {
     display: flex;
     flex-direction: column;
-    border: 1px solid #c3c3c3;
-    justify-content: center;
     align-items: center;
-    /* width: min-content; */
 }
 
 .carpet-container {
@@ -12,22 +9,22 @@
     display: flex;
     flex-direction: row;
     padding-left: 15px;
-    /* padding-right: 15px; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    width: auto;
+    width: 50%;
+    justify-content: space-between;
 }
 
 img {
-    max-width: 200px;
-    min-height: fill;
-    height: auto;
-    width: auto;
+    object-fit: cover;
+    max-height: 100%;
+    height: 250px;
+    width: 250px;
 }
 
 .carpet {
-    padding-right: 1.5rem;
+    padding-right: 5.5rem;
 }
 
 h3 {
