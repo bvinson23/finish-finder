@@ -8,6 +8,7 @@
 }
 
 .board-title {
+    border: 1px black solid;
     background-color: #ae9983;
     padding-left: .5em;
     padding-bottom: .05rem;
