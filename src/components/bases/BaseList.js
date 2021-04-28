@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllBases } from "../../modules/BaseManager";
 import { BaseCard } from "./BaseCard";
+import "./Base.css";
 
 export const BaseList = () => {
     const [bases, setBases] = useState([]);
@@ -17,7 +18,7 @@ export const BaseList = () => {
 
     return (
         <div className="container-cards">
-            <h2>Vinyl Bases</h2>
+            <h2>VINYL BASES</h2>
             {bases.map(base => <BaseCard key={base.id} base={base} />)}
         </div>
     )
