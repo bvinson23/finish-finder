@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllPaints } from "../../modules/PaintManager";
 import { PaintCard } from "./PaintCard";
+import "./Paint.css";
 
 export const PaintList = () => {
     const [paints, setPaints] = useState([]);
@@ -17,7 +18,7 @@ export const PaintList = () => {
 
     return (
         <div className="container-cards">
-            <h2>Paints</h2>
+            <h2>PAINTS</h2>
             {paints.map(paint => <PaintCard key={paint.id} paint={paint} />)}
         </div>
     )

@@ -1,0 +1,36 @@
+.container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carpet-container {
+    background-color: #CFCDC8;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    width: 50%;
+    justify-content: space-between;
+}
+
+img {
+    object-fit: cover;
+    max-height: 100%;
+    height: 250px;
+    width: 250px;
+}
+
+.carpet {
+    padding-right: 5.5rem;
+}
+
+h3 {
+    padding-bottom: -5px;
+}
+
+h2 {
+    font-family: 'Poiret One', cursive;
+}

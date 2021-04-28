@@ -7,9 +7,9 @@ export const CarpetCard = ({ carpet }) => {
             <div className="carpet-container">
                 <section className="carpet">
                     <h3>Name: {carpet.name}</h3>
+                    <p>Brand: {carpet.brand}</p>
                     <p>Color: {carpet.gencolor.name}</p>
                     <p>Style: {carpet.style.name}</p>
-                    <p>Brand: {carpet.brand}</p>
                     <p>Price: ${carpet.price}</p>
                 </section>
                 <div className="image-container">

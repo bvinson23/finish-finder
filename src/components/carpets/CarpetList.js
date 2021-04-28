@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllCarpets } from "../../modules/CarpetManager";
 import { CarpetCard } from "./CarpetCard";
+import "./Carpet.css";
 
 export const CarpetList = () => {
     const [carpets, setCarpets] = useState([]);
@@ -17,7 +18,9 @@ export const CarpetList = () => {
 
     return (
         <div className="container-cards">
-            <h2>Carpets</h2>
+            <div className="page-title">
+                <h2>CARPETS</h2>
+            </div>
             {carpets.map(carpet => <CarpetCard key={carpet.id} carpet={carpet} />)}
         </div>
     )
