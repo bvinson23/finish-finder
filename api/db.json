@@ -14,14 +14,16 @@
   "bases": [
     {
       "id": 1,
-      "name": "Traditional Vinyl 1/8 - Cinnamon",
+      "name": "Traditional Vinyl 1/8",
+      "colorName": "Cinnamon",
       "gencolorId": "8",
       "brand": "Tarkett",
-      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619623279/Tarkett-TradVinyl-Cinnamon_wjcbag.png"
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619637670/Tarkett-TradVinyl-Cinnamon_jplxpi.png"
     },
     {
       "id": 2,
-      "name": "700 Series - Aubergine",
+      "name": "700 Series",
+      "colorName": "Aubergine",
       "gencolorId": "5",
       "brand": "Roppe",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619623504/Roppe-700Series-Aubergine_td1joq.png"
@@ -46,7 +48,8 @@
   "carpets": [
     {
       "id": 1,
-      "name": "Bee's Knees - Dew",
+      "name": "Bee's Knees",
+      "colorName": "Dew",
       "gencolorId": 9,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542514/Interface-LetItBee-Dew_adbbot.png",
@@ -55,7 +58,8 @@
     },
     {
       "id": 2,
-      "name": "Street Smart - Passageway",
+      "name": "Street Smart",
+      "colorName": "Passageway",
       "gencolorId": 7,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542914/Interface-StreetSmart-Passageway_dp1dm9.png",
@@ -64,7 +68,8 @@
     },
     {
       "id": 3,
-      "name": "Open Air 401 - Linen",
+      "name": "Open Air 401",
+      "colorName": "Linen",
       "gencolorId": 11,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619622075/Interface-OpenAir-401-Linen_je1oj3.png",
@@ -139,6 +144,7 @@
   "boards": [
     {
       "id": 1,
+      "name": "Finish Board 1",
       "paintId": 1,
       "carpetId": 1,
       "baseId": 1,

@@ -1,7 +1,20 @@
-.board {
+.board-content {
     display: flex;
 }
 
 .board-section {
     border: 1px black solid;
+    background-color: #cfcdc8;
+}
+
+.board-title {
+    background-color: #ae9983;
+    padding-left: .5em;
+    padding-bottom: .05rem;
+}
+
+.board-title__components {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
 }
