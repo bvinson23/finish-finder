@@ -1,7 +1,7 @@
 .menu-container {
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: #ae9983;
 }
 
@@ -58,8 +58,14 @@
     vertical-align: middle;
     font-size: 14px;
     margin: 0 10px;
+    padding-bottom: 0;
   }
   
   .menu-trigger img {
     border-radius: 90px;
+  }
+
+  .logo img {
+    width: 25px;
+    height: 25px;
   }

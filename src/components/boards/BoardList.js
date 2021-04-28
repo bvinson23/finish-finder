@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { BoardCard } from "./BoardCard";
 import { getAllBoards } from "../../modules/BoardManager";
+import "./Board.css";
 
 export const BoardList = () => {
     const [boards, setBoards] = useState([]);
@@ -23,7 +24,7 @@ export const BoardList = () => {
                 <button type="button"
                     className="btn"
                     onClick={() => history.push("/boards/create")}>
-                        Create a Board
+                        - Create a Board -
                     </button>
             </section>
             <div className="container-cards">
