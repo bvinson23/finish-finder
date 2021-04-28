@@ -27,6 +27,7 @@ export const BoardList = () => {
                     </button>
             </section>
             <div className="container-cards">
+                <h2>FINISH BOARDS</h2>
                 {boards.map(board => <BoardCard key={board.id} board={board} />)}
             </div>
         </>
