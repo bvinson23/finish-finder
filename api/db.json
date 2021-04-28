@@ -9,17 +9,17 @@
     "bases": [
         {
             "id": 1,
-            "name": "Traditional Vinyl 1/8",
+            "name": "Traditional Vinyl 1/8 - Cinnamon",
             "gencolorId": "8",
             "brand": "Tarkett",
-            "image": ""
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619623279/Tarkett-TradVinyl-Cinnamon_wjcbag.png"
         },
         {
             "id": 2,
-            "name": "",
-            "gencolorId": "1",
+            "name": "700 Series - Aubergine",
+            "gencolorId": "5",
             "brand": "Roppe",
-            "image": ""
+            "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619623504/Roppe-700Series-Aubergine_td1joq.png"
         }
     ],
     "paints": [
