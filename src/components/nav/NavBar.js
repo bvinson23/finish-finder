@@ -27,6 +27,9 @@ export const NavBar = () => {
                 <ul>
                     <li><Link className="navbar__link" to="/carpets">Carpets</Link></li>
                 </ul>
+                <ul>
+                    <li><Link className="navbar__link" to="/login">Logout</Link></li>
+                </ul>
             </nav>
         </div>
     )
