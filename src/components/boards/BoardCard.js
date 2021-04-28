@@ -16,7 +16,7 @@ export const BoardCard = ({ board }) => {
                     <section className="board-section">
                         <article className="board-carpet">
                             <img src={board.carpet.image} alt={board.carpet.name}></img>
-                            <div className="carpet-details">
+                            <div className="details">
                                 <h4>{board.carpet.name}</h4>
                                 <p>Color: {board.carpet.colorName}</p>
                                 <p>Manufacturer: {board.carpet.brand}</p>
@@ -28,7 +28,7 @@ export const BoardCard = ({ board }) => {
                     <section className="board-section">
                         <article className="board-paint">
                             <img src={board.paint.image} alt={board.paint.name}></img>
-                            <div className="paint-details">
+                            <div className="details">
                                 <h4>{board.paint.name}</h4>
                                 <p>Manufacturer: {board.paint.brand}</p>
                             </div>
@@ -37,7 +37,7 @@ export const BoardCard = ({ board }) => {
                     <section className="board-section">
                         <article className="board-base">
                             <img src={board.base.image} alt={board.base.name}></img>
-                            <div className="base-details">
+                            <div className="details">
                                 <h4>{board.base.name}</h4>
                                 <p>Color: {board.base.colorName}</p>
                                 <p>Manufacturer: {board.base.brand}</p>
