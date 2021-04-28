@@ -30,9 +30,13 @@ export const ApplicationViews = () => {
                 <CarpetList />
             </Route>
 
-            {/*Render the login/register page when http://localhost:3000/login */}
+            {/*Render the login page when http://localhost:3000/login */}
             <Route path="/login">
                 <Login />
+            </Route>
+
+            {/*Render the register page when http://localhost:3000/register */}
+            <Route path="/register">
                 <Register />
             </Route>
         </>
