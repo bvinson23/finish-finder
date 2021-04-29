@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getAllColors } from "../../modules/ColorManager";
 import { getAllPaints } from "../../modules/PaintManager";
-import { PaintCard } from "./PaintCard";
 import { PaintSelectionCard } from "./PaintSelectionCard";
 
 export const PaintForm = () => {
@@ -14,22 +13,23 @@ export const PaintForm = () => {
     });
     const [colors, setColors] = useState([]);
     const [selection, setSelection] = useState({});
-    const [filter, setFilter] = useState("");
-    const [paints, setPaints] = useState([]);
     const [results, setResults] = useState([]);
     const history = useHistory();
 
     const handleColorSelection = (evt) => {
-        let selectionChange = evt.target.value
+        let selectionChange = parseInt(evt.target.value)
         setSelection(selectionChange)
+        console.log(selectionChange)
     }
 
     const selectionResults = (selection) => {
-        if (selection.length > 0) {
+        console.log(selection)
+        if (selection > 0) {
             getAllPaints()
                 .then(res => {
+                    console.log(res)
                     let colorPaints = res.filter(paint => {
-                        if (paint.gencolorId === selection.value) {
+                        if (paint.gencolorId === selection) {
                             return true
                         }
                     })
@@ -40,7 +40,7 @@ export const PaintForm = () => {
 
     useEffect(() => {
         selectionResults(selection)
-    }, [])
+    }, [selection])
 
     useEffect(() => {
         getAllColors()
@@ -55,7 +55,7 @@ export const PaintForm = () => {
                 <h4>Choose a Paint:</h4>
                 <div className="filter-dropdown">
                     <label htmlFor="color">Color</label>
-                    <select value={paint.gencolorId}
+                    <select value={selection}
                         name="gencolorId"
                         id="gencolorId"
                         onChange={handleColorSelection}
