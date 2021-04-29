@@ -80,65 +80,65 @@
   "gencolors": [
     {
       "id": 1,
-      "name": "red"
+      "name": "Red"
     },
     {
       "id": 2,
-      "name": "orange"
+      "name": "Orange"
     },
     {
       "id": 3,
-      "name": "yellow"
+      "name": "Yellow"
     },
     {
       "id": 4,
-      "name": "green"
+      "name": "Green"
     },
     {
       "id": 5,
-      "name": "blue"
+      "name": "Blue"
     },
     {
       "id": 6,
-      "name": "violet"
+      "name": "Violet"
     },
     {
       "id": 7,
-      "name": "black"
+      "name": "Black"
     },
     {
       "id": 8,
-      "name": "brown"
+      "name": "Brown"
     },
     {
       "id": 9,
-      "name": "grey"
+      "name": "Grey"
     },
     {
       "id": 10,
-      "name": "white"
+      "name": "White"
     },
     {
       "id": 11,
-      "name": "beige"
+      "name": "Beige"
     }
   ],
   "styles": [
     {
       "id": 1,
-      "name": "solid/texture"
+      "name": "Solid/Textured"
     },
     {
       "id": 2,
-      "name": "linear"
+      "name": "Linear"
     },
     {
       "id": 3,
-      "name": "organic"
+      "name": "Organic"
     },
     {
       "id": 4,
-      "name": "geometric"
+      "name": "Geometric"
     }
   ],
   "boards": [
