@@ -19,15 +19,12 @@ export const PaintForm = () => {
     const handleColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)
         setSelection(selectionChange)
-        console.log(selectionChange)
     }
 
     const selectionResults = (selection) => {
-        console.log(selection)
         if (selection > 0) {
             getAllPaints()
                 .then(res => {
-                    console.log(res)
                     let colorPaints = res.filter(paint => {
                         if (paint.gencolorId === selection) {
                             return true
