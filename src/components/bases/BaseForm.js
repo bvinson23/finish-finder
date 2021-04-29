@@ -19,25 +19,25 @@ export const BaseForm = () => {
     const selectionResults = (color) => {
         if (color > 0) {
             getAllBases()
-                .then(res => {
-                    let colorBases = res.filter(base => {
-                        if (base.gencolorId === color) {
-                            return true
-                        }
-                    })
-                    setResults(colorBases)
+            .then(res => {
+                let colorBases = res.filter(base => {
+                    if (base.gencolorId === color) {
+                        return true
+                    }
                 })
+                setResults(colorBases)
+            })
         } else setResults([])
     }
-
+    
     const handleSelectBase = (selection) => {
         setBase(selection)
     }
-
+    
     useEffect(() => {
         handleSelectBase(base)
     }, [base])
-
+    
     useEffect(() => {
         selectionResults(selection)
     }, [selection])
