@@ -5,12 +5,7 @@ import { getAllPaints } from "../../modules/PaintManager";
 import { PaintSelectionCard } from "./PaintSelectionCard";
 
 export const PaintForm = () => {
-    const [paint, setPaint] = useState({
-        name: "",
-        gencolorId: "",
-        brand: "",
-        image: ""
-    });
+    const [paint, setPaint] = useState({});
     const [colors, setColors] = useState([]);
     const [selection, setSelection] = useState({});
     const [results, setResults] = useState([]);
@@ -21,12 +16,12 @@ export const PaintForm = () => {
         setSelection(selectionChange)
     }
 
-    const selectionResults = (selection) => {
-        if (selection > 0) {
+    const selectionResults = (color) => {
+        if (color > 0) {
             getAllPaints()
                 .then(res => {
                     let colorPaints = res.filter(paint => {
-                        if (paint.gencolorId === selection) {
+                        if (paint.gencolorId === color) {
                             return true
                         }
                     })
@@ -34,6 +29,14 @@ export const PaintForm = () => {
                 })
         } else setResults([])
     }
+
+    const handleSelectPaint = (selection) => {
+        setPaint(selection)
+    }
+
+    useEffect(() => {
+        handleSelectPaint(paint)
+    }, [paint])
 
     useEffect(() => {
         selectionResults(selection)
@@ -73,7 +76,7 @@ export const PaintForm = () => {
                         <PaintSelectionCard
                             key={selection.id}
                             selection={selection}
-                        // handleAddPaint={handleAddPaint}
+                            handleSelectPaint={handleSelectPaint}
                         />
                     )}
             </div>
@@ -82,9 +85,9 @@ export const PaintForm = () => {
                     <h3>Selections</h3>
                     <div className="selection__paint">
                         <h4>Paint</h4>
-                        <p>paint selection(placeholder)</p>
+                        <p>{paint.name}</p>
                         <div className="selection__image">
-                            <img src="" alt="paint"></img>
+                            <img src={paint.image} alt={paint.name}></img>
                         </div>
                     </div>
                     <div className="selection__base">
