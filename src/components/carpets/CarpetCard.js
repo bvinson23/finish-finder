@@ -10,7 +10,7 @@ export const CarpetCard = ({ carpet }) => {
                     <p>Manufacturer: {carpet.brand}</p>
                     <p>Color: {carpet.colorName}</p>
                     <p>Style: {carpet.style.name}</p>
-                    <p>Price: ${carpet.price}</p>
+                    <p>Price: ${carpet.price} per Sq Yd</p>
                 </section>
                 <div className="image-container">
                     <img src={carpet.image} alt={carpet.name}></img>

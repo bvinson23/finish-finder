@@ -20,7 +20,7 @@ export const BoardCard = ({ board }) => {
                                 <h4>{board.carpet.name}</h4>
                                 <p>Color: {board.carpet.colorName}</p>
                                 <p>Manufacturer: {board.carpet.brand}</p>
-                                <p>Price: ${board.carpet.price}</p>
+                                <p>Price: ${board.carpet.price} per square yard</p>
                                 {/* <p>{board.carpet.styleId}</p> */}
                             </div>
                         </article>
