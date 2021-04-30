@@ -1,31 +1,52 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { getAllColors } from "../../modules/ColorManager";
-import { getAllCarpets } from "../../modules/CarpetManager";
+import { getAllCarpets, getAllPrices } from "../../modules/CarpetManager";
 import { CarpetSelectionCard } from "./CarpetSelectionCard";
 
 export const CarpetForm = () => {
     const [carpet, setCarpet] = useState({});
     const [colors, setColors] = useState([]);
-    const [selection, setSelection] = useState({});
+    const [prices, setPrices] = useState([]);
+    const [colorSelection, setColorSelection] = useState({});
+    const [priceSelection, setPriceSelection] = useState({});
     const [results, setResults] = useState([]);
     const history = useHistory();
 
     const handleColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)
-        setSelection(selectionChange)
+        setColorSelection(selectionChange)
     }
 
-    const selectionResults = (color) => {
-        if (color > 0) {
+    const selectionResults = (color, price) => {
+        if (color > 0 && price > 0) {
             getAllCarpets()
                 .then(res => {
-                    let colorCarpets = res.filter(carpet => {
-                        if (carpet.gencolorId === color) {
+                    let colorPriceCarpets = res.filter(carpet => {
+                        if (carpet.gencolorId === color && carpet.genpriceId === price) {
                             return true
                         }
                     })
-                    setResults(colorCarpets)
+                    setResults(colorPriceCarpets)
+                })
+        } else setResults([])
+    }
+    
+    const handlePriceSelection = (evt) => {
+        let selectionChange = parseInt(evt.target.value)
+        setPriceSelection(selectionChange)
+    }
+
+    const priceSelectionResults = (price) => {
+        if (price > 0) {
+            getAllCarpets()
+                .then(res => {
+                    let priceCarpets = res.filter(carpet => {
+                        if (carpet.price === price) {
+                            return true
+                        }
+                    })
+                    setResults(priceCarpets)
                 })
         } else setResults([])
     }
@@ -39,8 +60,8 @@ export const CarpetForm = () => {
     }, [carpet])
 
     useEffect(() => {
-        selectionResults(selection)
-    }, [selection])
+        selectionResults(colorSelection, priceSelection)
+    }, [colorSelection, priceSelection])
 
     useEffect(() => {
         getAllColors()
@@ -49,13 +70,20 @@ export const CarpetForm = () => {
             });
     }, []);
 
+    useEffect(() => {
+        getAllPrices()
+            .then(pricesFromAPI => {
+                setPrices(pricesFromAPI)
+            });
+    }, [])
+
     return (
         <>
             <div className="form-container">
                 <h4>Choose a Carpet:</h4>
                 <div className="filter-dropdown">
                     <label htmlFor="color">Color</label>
-                    <select value={selection}
+                    <select value={colorSelection}
                         name="gencolorId"
                         id="gencolorId"
                         onChange={handleColorSelection}
@@ -64,6 +92,21 @@ export const CarpetForm = () => {
                         {colors.map(color => (
                             <option key={color.id} value={color.id}>
                                 {color.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="filter-dropdown">
+                    <label htmlFor="price">Price</label>
+                    <select value={priceSelection}
+                        name="gencolorId"
+                        id="gencolorId"
+                        onChange={handlePriceSelection}
+                        className="filter-control">
+                        <option value="0">Select a price point</option>
+                        {prices.map(price => (
+                            <option key={price.id} value={price.id}>
+                                {price.name}
                             </option>
                         ))}
                     </select>

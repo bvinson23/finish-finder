@@ -51,6 +51,7 @@
       "name": "Bee's Knees",
       "colorName": "Dew",
       "gencolorId": 9,
+      "genpriceId": 5,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542514/Interface-LetItBee-Dew_adbbot.png",
       "price": 40,
@@ -61,6 +62,7 @@
       "name": "Street Smart",
       "colorName": "Passageway",
       "gencolorId": 7,
+      "genpriceId": 3,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542914/Interface-StreetSmart-Passageway_dp1dm9.png",
       "price": 30,
@@ -71,10 +73,22 @@
       "name": "Open Air 401",
       "colorName": "Linen",
       "gencolorId": 11,
+      "genpriceId": 3,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619622075/Interface-OpenAir-401-Linen_je1oj3.png",
       "price": 30,
       "styleId": 1
+    },
+    {
+      "id": 4,
+      "name": "Silver Linings",
+      "colorName": "Black Fade",
+      "gencolorId": 7,
+      "genpriceId": 5,
+      "brand": "Interface",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619797257/Interface-SilverLinings-BlackFade_x4s6z4.png",
+      "price": 40,
+      "styleId": 2
     }
   ],
   "gencolors": [
