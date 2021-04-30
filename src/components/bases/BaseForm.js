@@ -8,7 +8,7 @@ export const BaseForm = () => {
     const [base, setBase] = useState({});
     const [colors, setColors] = useState([]);
     const [selection, setSelection] = useState({});
-    const [results, setResults] = useState([]);
+    const [baseResults, setBaseResults] = useState([]);
     const history = useHistory();
 
     const handleColorSelection = (evt) => {
@@ -16,7 +16,7 @@ export const BaseForm = () => {
         setSelection(selectionChange)
     }
 
-    const selectionResults = (color) => {
+    const baseSelectionResults = (color) => {
         if (color > 0) {
             getAllBases()
             .then(res => {
@@ -25,9 +25,9 @@ export const BaseForm = () => {
                         return true
                     }
                 })
-                setResults(colorBases)
+                setBaseResults(colorBases)
             })
-        } else setResults([])
+        } else setBaseResults([])
     }
     
     const handleSelectBase = (selection) => {
@@ -39,7 +39,7 @@ export const BaseForm = () => {
     }, [base])
     
     useEffect(() => {
-        selectionResults(selection)
+        baseSelectionResults(selection)
     }, [selection])
 
     useEffect(() => {
@@ -71,40 +71,14 @@ export const BaseForm = () => {
             </div>
 
             <div className="filter-results">
-                {results.length === 0 ? <div></div> :
-                    results.map(selection =>
+                {baseResults.length === 0 ? <div></div> :
+                    baseResults.map(selection =>
                         <BaseSelectionCard
                             key={selection.id}
                             selection={selection}
                             handleSelectBase={handleSelectBase}
                         />
                     )}
-            </div>
-            <div className="form-group">
-                <aside className="selections-container">
-                    <h3>Selections</h3>
-                    <div className="selection__paint">
-                        <h4>Paint</h4>
-                        {/* <p>{paint.name}</p> */}
-                        <div className="selection__image">
-                            {/* <img src={paint.image} alt={paint.name}></img> */}
-                        </div>
-                    </div>
-                    <div className="selection__base">
-                        <h4>Vinyl Base</h4>
-                        <p>{base.name}</p>
-                        <div className="selection__image">
-                            <img src={base.image} alt={base.name}></img>
-                        </div>
-                    </div>
-                    <div className="selection__carpet">
-                        <h4>Carpet</h4>
-                        <p>carpet selection(placeholder)</p>
-                        <div className="selection__image">
-                            <img src="" alt="carpet"></img>
-                        </div>
-                    </div>
-                </aside>
             </div>
         </>
     )

@@ -23,7 +23,7 @@ export const BoardList = () => {
             <section className="section-content">
                 <button type="button"
                     className="btn"
-                    onClick={() => history.push("/boards/create/paint")}>
+                    onClick={() => history.push("/boards/create")}>
                         - Create a Board -
                     </button>
             </section>

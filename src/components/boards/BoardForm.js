@@ -1,55 +1,52 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router";
-import { getAllBases } from "../../modules/BaseManager";
-import { getAllCarpets } from "../../modules/CarpetManager";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { getAllColors } from "../../modules/ColorManager";
-import { getAllPaints, getPaintById } from "../../modules/PaintManager";
-import { addBoard } from "../../modules/BoardManager";
+import { getAllPaints } from "../../modules/PaintManager";
+import { getAllCarpets, getAllPrices } from "../../modules/CarpetManager";
+import { PaintSelectionCard } from "../paints/PaintSelectionCard";
+import { BaseSelectionCard } from "../bases/BaseSelectionCard";
+import { CarpetSelectionCard } from "../carpets/CarpetSelectionCard"
+import { SelectionPreviewCard } from "./SelectionPreviewCard";
 
 export const BoardForm = () => {
-    const [board, setBoard] = useState({});
-
-    const [isLoading, setIsLoading] = useState(false);
-
-    const [paints, setPaints] = useState([]);
-    const [paint, setPaint] = useState({name: "", gencolorId: ""});
-    const [carpets, setCarpets] = useState([]);
-    const [bases, setBases] = useState([]);
+    const [paint, setPaint] = useState({});
+    const [base, setBase] = useState({});
+    const [carpet, setCarpet] = useState({});
     const [colors, setColors] = useState([]);
+    const [paintSelection, setPaintSelection] = useState({});
+    const [paintResults, setPaintResults] = useState([]);
 
-    const history = useHistory();
+    const handleColorSelection = (evt) => {
+        let selectionChange = parseInt(evt.target.value)
+        setPaintSelection(selectionChange)
+    }
 
-    const handleFieldChange = event => {
-        const newBoard = { ...board }
-        let selectedVal = event.target.value
-        if (event.target.id.includes("Id")) {
-            selectedVal = parseInt(selectedVal)
-        }
-        newBoard[event.target.id] = selectedVal
-        setBoard(newBoard)
+    const paintSelectionResults = (color) => {
+        if (color > 0) {
+            getAllPaints()
+                .then(res => {
+                    let colorPaints = res.filter(paint => {
+                        if (paint.gencolorId === color) {
+                            return true
+                        }
+                    })
+                    setPaintResults(colorPaints)
+                })
+        } else setPaintResults([])
+    }
+
+    const handleSelectPaint = (selection) => {
+        setPaint(selection)
     }
 
     useEffect(() => {
-        getAllPaints()
-            .then(paintsFromAPI => {
-                setPaints(paintsFromAPI)
-            });
-    }, []);
+        handleSelectPaint(paint)
+    }, [paint])
 
     useEffect(() => {
-        getAllCarpets()
-            .then(carpetsFromAPI => {
-                setCarpets(carpetsFromAPI)
-            });
-    }, []);
+        paintSelectionResults(paintSelection)
+    }, [paintSelection])
 
-    useEffect(() => {
-        getAllBases()
-            .then(basesFromAPI => {
-                setBases(basesFromAPI)
-            });
-    }, []);
-    
     useEffect(() => {
         getAllColors()
             .then(colorsFromAPI => {
@@ -57,48 +54,43 @@ export const BoardForm = () => {
             });
     }, []);
 
-    const handleClickSave = event => {
-        event.preventDefault()
-        setIsLoading(true);
-
-        const paintId = board.paintId
-        const carpetId = board.carpetId
-        const baseId = board.baseId
-
-        if (paintId === 0 || carpetId === 0 || baseId === 0) {
-            window.alert("Please select all fields")
-        } else {
-            addBoard(board)
-                .then(() => history.push("/"))
-        }
-    }
-
     return (
-        <div className="form-group">
-            <aside className="selections-container">
-                <h3>Selections</h3>
-                <div className="selection__paint">
-                    <h4>Paint</h4>
-                    <p>paint selection(placeholder)</p>
-                    <div className="selection__image">
-                        <img src="" alt="paint"></img>
-                    </div>
+        <>
+            <div className="form-container">
+                <h4>Choose a Paint:</h4>
+                <div className="filter-dropdown">
+                    <label htmlFor="color">Color</label>
+                    <select value={paintSelection}
+                        name="gencolorId"
+                        id="gencolorId"
+                        onChange={handleColorSelection}
+                        className="filter-control">
+                        <option value="0">Select a color</option>
+                        {colors.map(color => (
+                            <option key={color.id} value={color.id}>
+                                {color.name}
+                            </option>
+                        ))}
+                    </select>
                 </div>
-                <div className="selection__base">
-                    <h4>Vinyl Base</h4>
-                    <p>base selection(placeholder)</p>
-                    <div className="selection__image">
-                        <img src="" alt="base"></img>
-                    </div>
-                </div>
-                <div className="selection__carpet">
-                    <h4>Carpet</h4>
-                    <p>carpet selection(placeholder)</p>
-                    <div className="selection__image">
-                        <img src="" alt="carpet"></img>
-                    </div>
-                </div>
-            </aside>
-        </div>
+            </div>
+
+            <div className="filter-results">
+                {paintResults.length === 0 ? <div></div> :
+                    paintResults.map(selection =>
+                        <PaintSelectionCard
+                            key={selection.id}
+                            selection={selection}
+                            handleSelectPaint={handleSelectPaint}
+                        />
+                    )}
+            </div>
+            <div className="preview-card">
+                <SelectionPreviewCard
+                    paint={paint}
+                    base={base}
+                    carpet={carpet} />
+            </div>
+        </>
     )
 }

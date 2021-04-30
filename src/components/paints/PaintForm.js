@@ -7,16 +7,16 @@ import { PaintSelectionCard } from "./PaintSelectionCard";
 export const PaintForm = () => {
     const [paint, setPaint] = useState({});
     const [colors, setColors] = useState([]);
-    const [selection, setSelection] = useState({});
-    const [results, setResults] = useState([]);
+    const [paintSelection, setPaintSelection] = useState({});
+    const [paintResults, setPaintResults] = useState([]);
     const history = useHistory();
 
     const handleColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)
-        setSelection(selectionChange)
+        setPaintSelection(selectionChange)
     }
 
-    const selectionResults = (color) => {
+    const paintSelectionResults = (color) => {
         if (color > 0) {
             getAllPaints()
                 .then(res => {
@@ -25,9 +25,9 @@ export const PaintForm = () => {
                             return true
                         }
                     })
-                    setResults(colorPaints)
+                    setPaintResults(colorPaints)
                 })
-        } else setResults([])
+        } else setPaintResults([])
     }
 
     const handleSelectPaint = (selection) => {
@@ -39,8 +39,8 @@ export const PaintForm = () => {
     }, [paint])
 
     useEffect(() => {
-        selectionResults(selection)
-    }, [selection])
+        paintSelectionResults(paintSelection)
+    }, [paintSelection])
 
     useEffect(() => {
         getAllColors()
@@ -55,7 +55,7 @@ export const PaintForm = () => {
                 <h4>Choose a Paint:</h4>
                 <div className="filter-dropdown">
                     <label htmlFor="color">Color</label>
-                    <select value={selection}
+                    <select value={paintSelection}
                         name="gencolorId"
                         id="gencolorId"
                         onChange={handleColorSelection}
@@ -71,8 +71,8 @@ export const PaintForm = () => {
             </div>
 
             <div className="filter-results">
-                {results.length === 0 ? <div></div> :
-                    results.map(selection =>
+                {paintResults.length === 0 ? <div></div> :
+                    paintResults.map(selection =>
                         <PaintSelectionCard
                             key={selection.id}
                             selection={selection}

@@ -10,7 +10,7 @@ export const CarpetForm = () => {
     const [prices, setPrices] = useState([]);
     const [colorSelection, setColorSelection] = useState({});
     const [priceSelection, setPriceSelection] = useState({});
-    const [results, setResults] = useState([]);
+    const [carpetResults, setCarpetResults] = useState([]);
     const history = useHistory();
 
     const handleColorSelection = (evt) => {
@@ -18,7 +18,12 @@ export const CarpetForm = () => {
         setColorSelection(selectionChange)
     }
 
-    const selectionResults = (color, price) => {
+    const handlePriceSelection = (evt) => {
+        let selectionChange = parseInt(evt.target.value)
+        setPriceSelection(selectionChange)
+    }
+
+    const carpetSelectionResults = (color, price) => {
         if (color > 0 && price > 0) {
             getAllCarpets()
                 .then(res => {
@@ -27,28 +32,9 @@ export const CarpetForm = () => {
                             return true
                         }
                     })
-                    setResults(colorPriceCarpets)
+                    setCarpetResults(colorPriceCarpets)
                 })
-        } else setResults([])
-    }
-    
-    const handlePriceSelection = (evt) => {
-        let selectionChange = parseInt(evt.target.value)
-        setPriceSelection(selectionChange)
-    }
-
-    const priceSelectionResults = (price) => {
-        if (price > 0) {
-            getAllCarpets()
-                .then(res => {
-                    let priceCarpets = res.filter(carpet => {
-                        if (carpet.price === price) {
-                            return true
-                        }
-                    })
-                    setResults(priceCarpets)
-                })
-        } else setResults([])
+        } else setCarpetResults([])
     }
 
     const handleSelectCarpet = (selection) => {
@@ -60,7 +46,7 @@ export const CarpetForm = () => {
     }, [carpet])
 
     useEffect(() => {
-        selectionResults(colorSelection, priceSelection)
+        carpetSelectionResults(colorSelection, priceSelection)
     }, [colorSelection, priceSelection])
 
     useEffect(() => {
@@ -114,8 +100,8 @@ export const CarpetForm = () => {
             </div>
 
             <div className="filter-results">
-                {results.length === 0 ? <div></div> :
-                    results.map(selection =>
+                {carpetResults.length === 0 ? <div></div> :
+                    carpetResults.map(selection =>
                         <CarpetSelectionCard
                             key={selection.id}
                             selection={selection}
