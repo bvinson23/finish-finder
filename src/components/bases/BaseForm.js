@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { getAllColors } from "../../modules/ColorManager";
 import { getAllBases } from "../../modules/BaseManager";
 import { BaseSelectionCard } from "./BaseSelectionCard";
@@ -9,7 +8,6 @@ export const BaseForm = () => {
     const [colors, setColors] = useState([]);
     const [baseSelection, setBaseSelection] = useState({});
     const [baseResults, setBaseResults] = useState([]);
-    const history = useHistory();
 
     const handleBaseColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)

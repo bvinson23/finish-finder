@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-export const SelectionPreviewCard = ({ paint, base, carpet }) => {
+export const SelectionPreviewCard = ({ paint, base, carpet, handleClickSaveBoard }) => {
 
     return (
         <div className="form-group">
@@ -29,7 +29,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                         </div>
                     </div>
                     <Link to={"/"}>
-                        <button type="button" className="button-save"> -Save Board- </button>
+                        <button type="button" className="button-save" onClick={handleClickSaveBoard}> -Save Board- </button>
                     </Link>
                 </aside>
             </div>

@@ -4,6 +4,7 @@ import { getAllColors } from "../../modules/ColorManager";
 import { getAllPaints } from "../../modules/PaintManager";
 import { getAllBases } from "../../modules/BaseManager";
 import { getAllCarpets, getAllPrices } from "../../modules/CarpetManager";
+import { addBoard } from "../../modules/BoardManager";
 import { PaintSelectionCard } from "../paints/PaintSelectionCard";
 import { BaseSelectionCard } from "../bases/BaseSelectionCard";
 import { CarpetSelectionCard } from "../carpets/CarpetSelectionCard"
@@ -17,12 +18,46 @@ export const BoardForm = () => {
     const [baseSelection, setBaseSelection] = useState({});
     const [baseResults, setBaseResults] = useState([]);
     const [carpet, setCarpet] = useState({});
-    const [carpetSelection, setCarpetSelection] = useState({});
     const [carpetResults, setCarpetResults] = useState([]);
     const [prices, setPrices] = useState([]);
     const [colors, setColors] = useState([]);
     const [colorSelection, setColorSelection] = useState({});
     const [priceSelection, setPriceSelection] = useState({});
+    const [board, setBoard] = useState({
+        name: "",
+        paintId: 0,
+        carpetId: 0,
+        baseId: 0,
+        userId: parseInt(sessionStorage.getItem("app_user_id"))
+    })
+
+    const history = useHistory();
+
+    //------Board functions------
+    const handleFieldChange = evt => {
+        const newBoard = { ...board }
+        let selectedVal = evt.target.value
+        if (evt.target.id.includes("Id")) {
+            selectedVal = parseInt(selectedVal)
+        }
+        newBoard[evt.target.id] = selectedVal
+        setBoard(newBoard)
+    }
+    const handleClickSaveBoard = evt => {
+        evt.preventDefault()
+
+        const name = board.name
+        const paintId = board.paintId
+        const carpetId = board.carpetId
+        const baseId = board.baseId
+
+        if (name.length <=0 || paintId === 0 || carpetId === 0 || baseId === 0) {
+            window.alert("Please select one of each finish")
+        } else {
+            addBoard(board)
+                .then(() => history.pushState("/"))
+        }
+    }
 
     //------Paint functions------
     const handlePaintColorSelection = (evt) => {
@@ -255,7 +290,8 @@ export const BoardForm = () => {
                 <SelectionPreviewCard
                     paint={paint}
                     base={base}
-                    carpet={carpet} />
+                    carpet={carpet}
+                    handleClickSaveBoard={handleClickSaveBoard} />
             </div>
         </>
     )

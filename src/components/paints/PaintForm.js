@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { getAllColors } from "../../modules/ColorManager";
 import { getAllPaints } from "../../modules/PaintManager";
 import { PaintSelectionCard } from "./PaintSelectionCard";
@@ -9,7 +8,6 @@ export const PaintForm = () => {
     const [colors, setColors] = useState([]);
     const [paintSelection, setPaintSelection] = useState({});
     const [paintResults, setPaintResults] = useState([]);
-    const history = useHistory();
 
     const handlePaintColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)

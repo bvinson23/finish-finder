@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getAllColors } from "../../modules/ColorManager";
 import { getAllCarpets, getAllPrices } from "../../modules/CarpetManager";
 import { CarpetSelectionCard } from "./CarpetSelectionCard";
@@ -11,7 +11,6 @@ export const CarpetForm = () => {
     const [colorSelection, setColorSelection] = useState({});
     const [priceSelection, setPriceSelection] = useState({});
     const [carpetResults, setCarpetResults] = useState([]);
-    const history = useHistory();
 
     const handleCarpetColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)
