@@ -11,7 +11,7 @@ export const PaintForm = () => {
     const [paintResults, setPaintResults] = useState([]);
     const history = useHistory();
 
-    const handleColorSelection = (evt) => {
+    const handlePaintColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)
         setPaintSelection(selectionChange)
     }
@@ -58,7 +58,7 @@ export const PaintForm = () => {
                     <select value={paintSelection}
                         name="gencolorId"
                         id="gencolorId"
-                        onChange={handleColorSelection}
+                        onChange={handlePaintColorSelection}
                         className="filter-control">
                         <option value="0">Select a color</option>
                         {colors.map(color => (

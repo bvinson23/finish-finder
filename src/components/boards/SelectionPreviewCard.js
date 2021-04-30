@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const SelectionPreviewCard = ({ paint, base, carpet }) => {
 
@@ -27,6 +28,9 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             <img src={carpet.image} alt={carpet.name}></img>
                         </div>
                     </div>
+                    <Link to={"/"}>
+                        <button type="button" className="button-save"> -Save Board- </button>
+                    </Link>
                 </aside>
             </div>
     )

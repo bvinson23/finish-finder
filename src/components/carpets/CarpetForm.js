@@ -13,7 +13,7 @@ export const CarpetForm = () => {
     const [carpetResults, setCarpetResults] = useState([]);
     const history = useHistory();
 
-    const handleColorSelection = (evt) => {
+    const handleCarpetColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)
         setColorSelection(selectionChange)
     }
@@ -72,7 +72,7 @@ export const CarpetForm = () => {
                     <select value={colorSelection}
                         name="gencolorId"
                         id="gencolorId"
-                        onChange={handleColorSelection}
+                        onChange={handleCarpetColorSelection}
                         className="filter-control">
                         <option value="0">Select a color</option>
                         {colors.map(color => (

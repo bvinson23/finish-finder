@@ -7,13 +7,13 @@ import { BaseSelectionCard } from "./BaseSelectionCard";
 export const BaseForm = () => {
     const [base, setBase] = useState({});
     const [colors, setColors] = useState([]);
-    const [selection, setSelection] = useState({});
+    const [baseSelection, setBaseSelection] = useState({});
     const [baseResults, setBaseResults] = useState([]);
     const history = useHistory();
 
-    const handleColorSelection = (evt) => {
+    const handleBaseColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)
-        setSelection(selectionChange)
+        setBaseSelection(selectionChange)
     }
 
     const baseSelectionResults = (color) => {
@@ -39,8 +39,8 @@ export const BaseForm = () => {
     }, [base])
     
     useEffect(() => {
-        baseSelectionResults(selection)
-    }, [selection])
+        baseSelectionResults(baseSelection)
+    }, [baseSelection])
 
     useEffect(() => {
         getAllColors()
@@ -55,10 +55,10 @@ export const BaseForm = () => {
                 <h4>Choose a Vinyl Base:</h4>
                 <div className="filter-dropdown">
                     <label htmlFor="color">Color</label>
-                    <select value={selection}
+                    <select value={baseSelection}
                         name="gencolorId"
                         id="gencolorId"
-                        onChange={handleColorSelection}
+                        onChange={handleBaseColorSelection}
                         className="filter-control">
                         <option value="0">Select a color</option>
                         {colors.map(color => (
