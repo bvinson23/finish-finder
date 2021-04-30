@@ -16,7 +16,7 @@
       "id": 1,
       "name": "Traditional Vinyl 1/8",
       "colorName": "Cinnamon",
-      "gencolorId": "8",
+      "gencolorId": 8,
       "brand": "Tarkett",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619637670/Tarkett-TradVinyl-Cinnamon_jplxpi.png"
     },
@@ -24,7 +24,7 @@
       "id": 2,
       "name": "700 Series",
       "colorName": "Aubergine",
-      "gencolorId": "5",
+      "gencolorId": 5,
       "brand": "Roppe",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619623504/Roppe-700Series-Aubergine_td1joq.png"
     }

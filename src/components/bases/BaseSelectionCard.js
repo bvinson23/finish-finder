@@ -7,6 +7,7 @@ export const BaseSelectionCard = ({ selection, handleSelectBase }) => {
             <h3>Preview Area</h3>
             <div className="preview-area">
                 <h4>{selection.name}</h4>
+                <p>{selection.colorName}</p>
                 <img src={selection.image} alt={selection.name}></img>
                 <button type="button"
                     className="select-button"
