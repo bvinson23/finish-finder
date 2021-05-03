@@ -30,3 +30,14 @@ export const deleteBoard = id => {
         method: "DELETE"
     }).then(res => res.json())
 }
+
+//fetch call that edits an existing board
+export const updateBoard = (editedBoard) => {
+    return fetch(`${remoteURL}/boards/${editedBoard.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedBoard)
+    }).then(res => res.json())
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Board.css";
+import { Link } from "react-router-dom";
 import { FaPen, FaTrashAlt } from "react-icons/fa";
 
 export const BoardCard = ({ board, handleDeleteBoard }) => {
@@ -9,7 +10,12 @@ export const BoardCard = ({ board, handleDeleteBoard }) => {
                 <div className="board-title">
                     <div className="board-title__components">
                         <h2>{board.name}</h2>
-                        <p><FaPen /><button type="button" className="button-delete" onClick={() =>handleDeleteBoard(board.id)}><FaTrashAlt /></button></p>
+                        <p>
+                            <Link to={`/boards/${board.id}/edit`}>
+                                <button><FaPen /></button>
+                            </Link>
+                            <button type="button" className="button-delete" onClick={() => handleDeleteBoard(board.id)}><FaTrashAlt /></button>
+                        </p>
                     </div>
                 </div>
                 <div className="board-content">
