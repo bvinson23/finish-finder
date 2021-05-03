@@ -171,14 +171,6 @@
       "carpetId": 2,
       "baseId": 2,
       "userId": 1
-    },
-    {
-      "name": "Finish Board 3",
-      "paintId": 2,
-      "carpetId": 1,
-      "baseId": 1,
-      "userId": 1,
-      "id": 3
     }
   ],
   "pricepoints": [

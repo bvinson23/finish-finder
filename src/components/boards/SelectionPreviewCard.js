@@ -14,13 +14,19 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
     const history = useHistory();
 
     const handleFieldChange = evt => {
-        const newBoard = { ...board }
+        let newBoard = {
+            paintId: paint.id,
+            carpetId: carpet.id,
+            baseId: base.id,
+            name: board.name,
+            userId: parseInt(sessionStorage.getItem("app_user_id"))
+        }
         let selectedVal = evt.target.value
         if (evt.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
         newBoard[evt.target.id] = selectedVal
-        console.log(evt.target.id)
+        console.log(selectedVal)
         setBoard(newBoard)
     }
     const handleClickSaveBoard = evt => {
@@ -33,8 +39,8 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
         // if (paintId <= 0 || carpetId <= 0 || baseId <= 0) {
         //     window.alert("Please select one of each finish")
         // } else {
-            addBoard(board)
-                .then(() => history.push("/"))
+        addBoard(board)
+            .then(() => history.push("/"))
         // }
     }
 
@@ -45,7 +51,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Title:</label>
-                        <input 
+                        <input
                             type="text"
                             id="name"
                             onChange={handleFieldChange}
@@ -57,12 +63,13 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                 </fieldset>
                 <fieldset>
                     <div className="selection__paint">
-                        <select 
+                        <select
                             id="paint"
+                            type="hidden"
                             onInput={handleFieldChange}
                             value={board.paintId}>
-                                <option value="paint.id"></option>
-                            </select>
+                            <option value="paint.id"></option>
+                        </select>
                         <h4>Paint</h4>
                         <p>{paint.name}</p>
                         <div className="selection__image">
@@ -72,7 +79,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                 </fieldset>
                 <fieldset>
                     <div className="selection__base">
-                        <select 
+                        <select
                             id="base"
                             onChange={handleFieldChange}
                             value={board.baseId} />
