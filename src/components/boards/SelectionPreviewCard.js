@@ -48,7 +48,6 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
     return (
         <form className="boardForm">
             <aside className="selections-container">
-                <h3>Selections</h3>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Title:</label>
