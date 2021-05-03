@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { addBoard } from "../../modules/BoardManager";
+import "./BoardForm.css";
 
 export const SelectionPreviewCard = ({ paint, base, carpet }) => {
     const [board, setBoard] = useState({

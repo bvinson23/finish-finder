@@ -1,0 +1,46 @@
+.page-container {
+    display: flex;
+    background-color: #cfcdc8;
+    border: 1px black solid;
+    margin: 1rem;
+    justify-content: space-between;
+}
+
+fieldset {
+    border: none;
+}
+
+.preview-card {
+    justify-content: right;
+}
+
+.preview-area {
+    border: 1px black solid;
+    display: flex;
+}
+
+.preview-title {
+    background-color: #ae9983; 
+}
+
+h3 {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.filter-dropdown {
+    padding-bottom: 1rem;
+}
+
+.navigation-buttons {
+    display: flex;
+    background-color: #ae9983;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: #91969c;
+    color: white;
+    max-height: 50px;
+    align-self: flex-end;
+}
