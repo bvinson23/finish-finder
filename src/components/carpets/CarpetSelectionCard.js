@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 export const CarpetSelectionCard = ({ selection, handleSelectCarpet }) => {
     return (
         <div className="selection-box">
-            <div className="preview-title">
-                <h3>Preview Area</h3>
-            </div>
             <div className="preview-area">
                 <div>
                     <h4>{selection.name}</h4>
@@ -23,6 +20,7 @@ export const CarpetSelectionCard = ({ selection, handleSelectCarpet }) => {
             <div className="navigation-buttons">
                 <Link to={"/boards/create/base"}>
                     <button type="button" className="button-back"> -Back- </button>
+                    <button type="hidden" className="button-next-hidden"> -Next- </button>
                 </Link>
             </div>
         </div>

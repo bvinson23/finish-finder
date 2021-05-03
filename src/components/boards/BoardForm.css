@@ -44,3 +44,14 @@ button {
     max-height: 50px;
     align-self: flex-end;
 }
+.button-next-hidden {
+    visibility: hidden;
+}
+
+.hide-me {
+    visibility: hidden;
+}
+
+.button-delete {
+    color: black;
+}

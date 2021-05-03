@@ -168,6 +168,9 @@ export const BoardForm = () => {
                         </div>
                     </div>
 
+                    <div className="preview-title">
+                        <h3>Preview Area</h3>
+                    </div>
                     <div className="preview-area">
                         <div className="filter-results">
                             {paintResults.length === 0 ? <div></div> :
@@ -200,6 +203,9 @@ export const BoardForm = () => {
                         </div>
                     </div>
 
+                    <div className="preview-title">
+                        <h3>Preview Area</h3>
+                    </div>
                     <div className="filter-results">
                         {baseResults.length === 0 ? <div></div> :
                             baseResults.map(selection =>
@@ -228,6 +234,7 @@ export const BoardForm = () => {
                                 ))}
                             </select>
                         </div>
+
                         <div className="filter-dropdown">
                             <label htmlFor="price">Price</label>
                             <select value={priceSelection}
@@ -245,6 +252,9 @@ export const BoardForm = () => {
                         </div>
                     </div>
 
+                    <div className="preview-title">
+                        <h3>Preview Area</h3>
+                    </div>
                     <div className="filter-results">
                         {carpetResults.length === 0 ? <div></div> :
                             carpetResults.map(selection =>
