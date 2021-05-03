@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { addBoard } from "../../modules/BoardManager";
+import "./BoardForm.css";
 
 export const SelectionPreviewCard = ({ paint, base, carpet }) => {
     const [board, setBoard] = useState({
@@ -47,7 +48,6 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
     return (
         <form className="boardForm">
             <aside className="selections-container">
-                <h3>Selections</h3>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Title:</label>
@@ -65,7 +65,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                     <div className="selection__paint">
                         <select
                             id="paint"
-                            type="hidden"
+                            className="hide-me"
                             onInput={handleFieldChange}
                             value={board.paintId}>
                             <option value="paint.id"></option>
@@ -81,6 +81,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                     <div className="selection__base">
                         <select
                             id="base"
+                            className="hide-me"
                             onChange={handleFieldChange}
                             value={board.baseId} />
                         <h4>Vinyl Base</h4>
@@ -94,6 +95,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                     <div className="selection__carpet">
                         <select
                             id="carpet"
+                            className="hide-me"
                             onChange={handleFieldChange}
                             value={board.carpetId} />
                         <h4>Carpet</h4>

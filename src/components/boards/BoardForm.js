@@ -7,6 +7,7 @@ import { PaintSelectionCard } from "../paints/PaintSelectionCard";
 import { BaseSelectionCard } from "../bases/BaseSelectionCard";
 import { CarpetSelectionCard } from "../carpets/CarpetSelectionCard"
 import { SelectionPreviewCard } from "./SelectionPreviewCard";
+import "./BoardForm.css";
 
 export const BoardForm = () => {
     const [paint, setPaint] = useState({});
@@ -146,116 +147,138 @@ export const BoardForm = () => {
 
     return (
         <>
-            <div className="form-container">
-                <h4>Choose a Paint:</h4>
-                <div className="filter-dropdown">
-                    <label htmlFor="color">Color</label>
-                    <select value={paintSelection}
-                        name="gencolorId"
-                        id="gencolorId"
-                        onChange={handlePaintColorSelection}
-                        className="filter-control">
-                        <option value="0">Select a color</option>
-                        {colors.map(color => (
-                            <option key={color.id} value={color.id}>
-                                {color.name}
-                            </option>
-                        ))}
-                    </select>
+            <div className="page-container">
+                <div className="selections-title">
+                    <h3>Selections</h3>
                 </div>
-            </div>
+                <div className="everything-else">
+                    <div className="selection-container">
+                        <div className="form-container">
+                            <h4>Choose a Paint:</h4>
+                            <div className="filter-dropdown">
+                                <label htmlFor="color">Color</label>
+                                <select value={paintSelection}
+                                    name="gencolorId"
+                                    id="gencolorId"
+                                    onChange={handlePaintColorSelection}
+                                    className="filter-control">
+                                    <option value="0">Select a color</option>
+                                    {colors.map(color => (
+                                        <option key={color.id} value={color.id}>
+                                            {color.name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
 
-            <div className="filter-results">
-                {paintResults.length === 0 ? <div></div> :
-                    paintResults.map(selection =>
-                        <PaintSelectionCard
-                            key={selection.id}
-                            selection={selection}
-                            handleSelectPaint={handleSelectPaint}
-                        />
-                    )}
-            </div>
+                        <div className="preview-title">
+                            <h3>Preview Area</h3>
+                        </div>
+                        <div className="preview-area">
+                            <div className="filter-results">
+                                {paintResults.length === 0 ? <div></div> :
+                                    paintResults.map(selection =>
+                                        <PaintSelectionCard
+                                            key={selection.id}
+                                            selection={selection}
+                                            handleSelectPaint={handleSelectPaint}
+                                        />
+                                    )}
+                            </div>
+                        </div>
 
-            <div className="form-container">
-                <h4>Choose a Vinyl Base:</h4>
-                <div className="filter-dropdown">
-                    <label htmlFor="color">Color</label>
-                    <select value={baseSelection}
-                        name="gencolorId"
-                        id="gencolorId"
-                        onChange={handleBaseColorSelection}
-                        className="filter-control">
-                        <option value="0">Select a color</option>
-                        {colors.map(color => (
-                            <option key={color.id} value={color.id}>
-                                {color.name}
-                            </option>
-                        ))}
-                    </select>
+                        <div className="form-container">
+                            <h4>Choose a Vinyl Base:</h4>
+                            <div className="filter-dropdown">
+                                <label htmlFor="color">Color</label>
+                                <select value={baseSelection}
+                                    name="gencolorId"
+                                    id="gencolorId"
+                                    onChange={handleBaseColorSelection}
+                                    className="filter-control">
+                                    <option value="0">Select a color</option>
+                                    {colors.map(color => (
+                                        <option key={color.id} value={color.id}>
+                                            {color.name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="preview-title">
+                            <h3>Preview Area</h3>
+                        </div>
+                        <div className="filter-results">
+                            {baseResults.length === 0 ? <div></div> :
+                                baseResults.map(selection =>
+                                    <BaseSelectionCard
+                                        key={selection.id}
+                                        selection={selection}
+                                        handleSelectBase={handleSelectBase}
+                                    />
+                                )}
+                        </div>
+
+                        <div className="form-container">
+                            <h4>Choose a Carpet:</h4>
+                            <div className="filter-dropdown">
+                                <label htmlFor="color">Color</label>
+                                <select value={colorSelection}
+                                    name="gencolorId"
+                                    id="gencolorId"
+                                    onChange={handleCarpetColorSelection}
+                                    className="filter-control">
+                                    <option value="0">Select a color</option>
+                                    {colors.map(color => (
+                                        <option key={color.id} value={color.id}>
+                                            {color.name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div className="filter-dropdown">
+                                <label htmlFor="price">Price</label>
+                                <select value={priceSelection}
+                                    name="gencolorId"
+                                    id="gencolorId"
+                                    onChange={handlePriceSelection}
+                                    className="filter-control">
+                                    <option value="0">Select a price point</option>
+                                    {prices.map(price => (
+                                        <option key={price.id} value={price.id}>
+                                            {price.name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="preview-title">
+                            <h3>Preview Area</h3>
+                        </div>
+                        <div className="filter-results">
+                            {carpetResults.length === 0 ? <div></div> :
+                                carpetResults.map(selection =>
+                                    <CarpetSelectionCard
+                                        key={selection.id}
+                                        selection={selection}
+                                        handleSelectCarpet={handleSelectCarpet}
+                                    />
+                                )}
+                        </div>
+                    </div>
+
+
+                    <div className="preview-card">
+                        <SelectionPreviewCard
+                            paint={paint}
+                            base={base}
+                            carpet={carpet} />
+                    </div>
                 </div>
-            </div>
-
-            <div className="filter-results">
-                {baseResults.length === 0 ? <div></div> :
-                    baseResults.map(selection =>
-                        <BaseSelectionCard
-                            key={selection.id}
-                            selection={selection}
-                            handleSelectBase={handleSelectBase}
-                        />
-                    )}
-            </div>
-
-            <div className="form-container">
-                <h4>Choose a Carpet:</h4>
-                <div className="filter-dropdown">
-                    <label htmlFor="color">Color</label>
-                    <select value={colorSelection}
-                        name="gencolorId"
-                        id="gencolorId"
-                        onChange={handleCarpetColorSelection}
-                        className="filter-control">
-                        <option value="0">Select a color</option>
-                        {colors.map(color => (
-                            <option key={color.id} value={color.id}>
-                                {color.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-                <div className="filter-dropdown">
-                    <label htmlFor="price">Price</label>
-                    <select value={priceSelection}
-                        name="gencolorId"
-                        id="gencolorId"
-                        onChange={handlePriceSelection}
-                        className="filter-control">
-                        <option value="0">Select a price point</option>
-                        {prices.map(price => (
-                            <option key={price.id} value={price.id}>
-                                {price.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            </div>
-
-            <div className="filter-results">
-                {carpetResults.length === 0 ? <div></div> :
-                    carpetResults.map(selection =>
-                        <CarpetSelectionCard
-                            key={selection.id}
-                            selection={selection}
-                            handleSelectCarpet={handleSelectCarpet}
-                        />
-                    )}
-            </div>
-
-            <div className="preview-card">
-                <SelectionPreviewCard
-                    paint={paint}
-                    base={base}
-                    carpet={carpet} />
             </div>
         </>
     )

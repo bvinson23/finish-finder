@@ -171,6 +171,22 @@
       "carpetId": 2,
       "baseId": 2,
       "userId": 1
+    },
+    {
+      "paintId": 1,
+      "carpetId": 1,
+      "baseId": 2,
+      "name": "Test 2",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "paintId": 1,
+      "carpetId": 3,
+      "baseId": 1,
+      "name": "Test 3",
+      "userId": 1,
+      "id": 4
     }
   ],
   "pricepoints": [
