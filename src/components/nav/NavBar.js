@@ -11,6 +11,9 @@ export const NavBar = () => {
 
     return (
         <div className="menu-container">
+            <div className="logo">
+                <img src={"FinishFinderLogoSmall.png"} alt="logo"></img>
+            </div>
             <button onClick={onClick} className="menu-trigger">
                 <span><FaBars /></span>
             </button>

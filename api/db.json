@@ -16,7 +16,7 @@
       "id": 1,
       "name": "Traditional Vinyl 1/8",
       "colorName": "Cinnamon",
-      "gencolorId": "8",
+      "gencolorId": 8,
       "brand": "Tarkett",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619637670/Tarkett-TradVinyl-Cinnamon_jplxpi.png"
     },
@@ -24,7 +24,7 @@
       "id": 2,
       "name": "700 Series",
       "colorName": "Aubergine",
-      "gencolorId": "5",
+      "gencolorId": 5,
       "brand": "Roppe",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619623504/Roppe-700Series-Aubergine_td1joq.png"
     }
@@ -51,6 +51,7 @@
       "name": "Bee's Knees",
       "colorName": "Dew",
       "gencolorId": 9,
+      "genpriceId": 5,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542514/Interface-LetItBee-Dew_adbbot.png",
       "price": 40,
@@ -61,6 +62,7 @@
       "name": "Street Smart",
       "colorName": "Passageway",
       "gencolorId": 7,
+      "genpriceId": 3,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542914/Interface-StreetSmart-Passageway_dp1dm9.png",
       "price": 30,
@@ -71,74 +73,86 @@
       "name": "Open Air 401",
       "colorName": "Linen",
       "gencolorId": 11,
+      "genpriceId": 3,
       "brand": "Interface",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619622075/Interface-OpenAir-401-Linen_je1oj3.png",
       "price": 30,
       "styleId": 1
+    },
+    {
+      "id": 4,
+      "name": "Silver Linings",
+      "colorName": "Black Fade",
+      "gencolorId": 7,
+      "genpriceId": 5,
+      "brand": "Interface",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619797257/Interface-SilverLinings-BlackFade_x4s6z4.png",
+      "price": 40,
+      "styleId": 2
     }
   ],
   "gencolors": [
     {
       "id": 1,
-      "name": "red"
+      "name": "Red"
     },
     {
       "id": 2,
-      "name": "orange"
+      "name": "Orange"
     },
     {
       "id": 3,
-      "name": "yellow"
+      "name": "Yellow"
     },
     {
       "id": 4,
-      "name": "green"
+      "name": "Green"
     },
     {
       "id": 5,
-      "name": "blue"
+      "name": "Blue"
     },
     {
       "id": 6,
-      "name": "violet"
+      "name": "Violet"
     },
     {
       "id": 7,
-      "name": "black"
+      "name": "Black"
     },
     {
       "id": 8,
-      "name": "brown"
+      "name": "Brown"
     },
     {
       "id": 9,
-      "name": "grey"
+      "name": "Grey"
     },
     {
       "id": 10,
-      "name": "white"
+      "name": "White"
     },
     {
       "id": 11,
-      "name": "beige"
+      "name": "Beige"
     }
   ],
   "styles": [
     {
       "id": 1,
-      "name": "solid/texture"
+      "name": "Solid/Textured"
     },
     {
       "id": 2,
-      "name": "linear"
+      "name": "Linear"
     },
     {
       "id": 3,
-      "name": "organic"
+      "name": "Organic"
     },
     {
       "id": 4,
-      "name": "geometric"
+      "name": "Geometric"
     }
   ],
   "boards": [
@@ -151,12 +165,34 @@
       "userId": 1
     },
     {
-        "id": 2,
-        "name": "Finish Board 2",
-        "paintId": 2,
-        "carpetId": 2,
-        "baseId": 2,
-        "userId": 1
-      }
+      "id": 2,
+      "name": "Finish Board 2",
+      "paintId": 2,
+      "carpetId": 2,
+      "baseId": 2,
+      "userId": 1
+    }
+  ],
+  "pricepoints": [
+    {
+      "id": 1,
+      "name": "Under $20/yd"
+    },
+    {
+      "id": 2,
+      "name": "$20-$25/yd"
+    },
+    {
+      "id": 3,
+      "name": "$26-$30/yd"
+    },
+    {
+      "id": 4,
+      "name": "$31-$35/yd"
+    },
+    {
+      "id": 5,
+      "name": "Over $35/yd"
+    }
   ]
 }

@@ -12,3 +12,9 @@ export const getAllCarpets = () => {
     return fetch(`${remoteURL}/carpets?_expand=gencolor&_expand=style`)
         .then(res => res.json())
 }
+
+//fetch call that gets all price points
+export const getAllPrices = () => {
+    return fetch(`${remoteURL}/pricepoints`)
+        .then(res => res.json())
+}

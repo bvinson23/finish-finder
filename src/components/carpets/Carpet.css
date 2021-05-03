@@ -9,9 +9,9 @@
     display: flex;
     flex-direction: row;
     padding-left: 15px;
+    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
     width: 50%;
     justify-content: space-between;
 }
@@ -21,10 +21,6 @@ img {
     max-height: 100%;
     height: 250px;
     width: 250px;
-}
-
-.carpet {
-    padding-right: 5.5rem;
 }
 
 h3 {
