@@ -38,3 +38,9 @@ p, h4 {
     justify-content: center;
     margin-top: 25px;
 }
+
+.button-delete {
+    background-color: #ae9983;
+    border: none;
+    cursor: pointer;
+}

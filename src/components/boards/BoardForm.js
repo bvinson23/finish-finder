@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { getAllColors } from "../../modules/ColorManager";
 import { getAllPaints } from "../../modules/PaintManager";
 import { getAllBases } from "../../modules/BaseManager";
 import { getAllCarpets, getAllPrices } from "../../modules/CarpetManager";
-import { addBoard } from "../../modules/BoardManager";
 import { PaintSelectionCard } from "../paints/PaintSelectionCard";
 import { BaseSelectionCard } from "../bases/BaseSelectionCard";
 import { CarpetSelectionCard } from "../carpets/CarpetSelectionCard"
@@ -23,41 +21,8 @@ export const BoardForm = () => {
     const [colors, setColors] = useState([]);
     const [colorSelection, setColorSelection] = useState({});
     const [priceSelection, setPriceSelection] = useState({});
-    const [board, setBoard] = useState({
-        name: "",
-        paintId: 0,
-        carpetId: 0,
-        baseId: 0,
-        userId: parseInt(sessionStorage.getItem("app_user_id"))
-    })
-
-    const history = useHistory();
-
     //------Board functions------
-    const handleFieldChange = evt => {
-        const newBoard = { ...board }
-        let selectedVal = evt.target.value
-        if (evt.target.id.includes("Id")) {
-            selectedVal = parseInt(selectedVal)
-        }
-        newBoard[evt.target.id] = selectedVal
-        setBoard(newBoard)
-    }
-    const handleClickSaveBoard = evt => {
-        evt.preventDefault()
 
-        const name = board.name
-        const paintId = board.paintId
-        const carpetId = board.carpetId
-        const baseId = board.baseId
-
-        if (name.length <=0 || paintId === 0 || carpetId === 0 || baseId === 0) {
-            window.alert("Please select one of each finish")
-        } else {
-            addBoard(board)
-                .then(() => history.pushState("/"))
-        }
-    }
 
     //------Paint functions------
     const handlePaintColorSelection = (evt) => {
@@ -92,17 +57,17 @@ export const BoardForm = () => {
     const baseSelectionResults = (color) => {
         if (color > 0) {
             getAllBases()
-            .then(res => {
-                let colorBases = res.filter(base => {
-                    if (base.gencolorId === color) {
-                        return true
-                    }
+                .then(res => {
+                    let colorBases = res.filter(base => {
+                        if (base.gencolorId === color) {
+                            return true
+                        }
+                    })
+                    setBaseResults(colorBases)
                 })
-                setBaseResults(colorBases)
-            })
         } else setBaseResults([])
     }
-    
+
     const handleSelectBase = (selection) => {
         setBase(selection)
     }
@@ -140,43 +105,43 @@ export const BoardForm = () => {
     useEffect(() => {
         handleSelectPaint(paint)
     }, [paint])
-    
+
     useEffect(() => {
         paintSelectionResults(paintSelection)
     }, [paintSelection])
-    
-    
+
+
     //------Base useEffects------
     useEffect(() => {
         handleSelectBase(base)
     }, [base])
-    
+
     useEffect(() => {
         baseSelectionResults(baseSelection)
     }, [baseSelection])
-    
+
     //------Carpet useEffects------
     useEffect(() => {
         handleSelectCarpet(carpet)
     }, [carpet])
-    
+
     useEffect(() => {
         carpetSelectionResults(colorSelection, priceSelection)
     }, [colorSelection, priceSelection])
-    
+
     useEffect(() => {
         getAllPrices()
-        .then(pricesFromAPI => {
-            setPrices(pricesFromAPI)
-        });
+            .then(pricesFromAPI => {
+                setPrices(pricesFromAPI)
+            });
     }, [])
-    
+
     //------Shared useEffects------
     useEffect(() => {
         getAllColors()
-        .then(colorsFromAPI => {
-            setColors(colorsFromAPI)
-        });
+            .then(colorsFromAPI => {
+                setColors(colorsFromAPI)
+            });
     }, []);
 
     return (
@@ -290,8 +255,7 @@ export const BoardForm = () => {
                 <SelectionPreviewCard
                     paint={paint}
                     base={base}
-                    carpet={carpet}
-                    handleClickSaveBoard={handleClickSaveBoard} />
+                    carpet={carpet} />
             </div>
         </>
     )

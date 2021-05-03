@@ -23,3 +23,10 @@ export const addBoard = (newBoard) => {
         body: JSON.stringify(newBoard)
     }).then(res => res.json())
 }
+
+//fetch call that deletes a board
+export const deleteBoard = id => {
+    return fetch(`${remoteURL}/boards/${id}`, {
+        method: "DELETE"
+    }).then(res => res.json())
+}

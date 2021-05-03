@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { BoardCard } from "./BoardCard";
-import { getAllBoards } from "../../modules/BoardManager";
+import { getAllBoards, deleteBoard } from "../../modules/BoardManager";
 import "./Board.css";
 
 export const BoardList = () => {
@@ -13,6 +13,11 @@ export const BoardList = () => {
             setBoards(boardsfromAPI)
         });
     };
+
+    const handleDeleteBoard = id => {
+        deleteBoard(id)
+            .then(() => getBoards())
+    }
 
     useEffect(() => {
         getBoards();
@@ -29,7 +34,7 @@ export const BoardList = () => {
             </section>
             <div className="container-cards">
                 <h2>FINISH BOARDS</h2>
-                {boards.map(board => <BoardCard key={board.id} board={board} />)}
+                {boards.map(board => <BoardCard key={board.id} board={board} handleDeleteBoard={handleDeleteBoard} />)}
             </div>
         </>
     )
