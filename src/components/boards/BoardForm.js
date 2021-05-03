@@ -22,8 +22,6 @@ export const BoardForm = () => {
     const [colors, setColors] = useState([]);
     const [colorSelection, setColorSelection] = useState({});
     const [priceSelection, setPriceSelection] = useState({});
-    //------Board functions------
-
 
     //------Paint functions------
     const handlePaintColorSelection = (evt) => {
