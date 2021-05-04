@@ -43,6 +43,27 @@
       "gencolorId": 8,
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619454569/colorJava_hny5nb.png",
       "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 3,
+      "name": "Limon Fresco",
+      "gencolorId": 3,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620161320/colorLimonFresco_qbvqfs.png",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 4,
+      "name": "Positive Red",
+      "gencolorId": 1,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620162024/colorPositiveRed_sy6wzf.png",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 5,
+      "name": "Julep",
+      "gencolorId": 4,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620163445/colorJulep_tjdiqt.png",
+      "brand": "Sherwin-Williams"
     }
   ],
   "carpets": [
@@ -173,33 +194,7 @@
       "paintId": 1,
       "carpetId": 1,
       "baseId": 1,
-      "userId": 1,
-      "paint": {
-        "id": 1,
-        "name": "Naval",
-        "gencolorId": 5,
-        "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619454580/colorNaval_yeq21c.png",
-        "brand": "Sherwin-Williams"
-      },
-      "base": {
-        "id": 1,
-        "name": "Traditional Vinyl 1/8",
-        "colorName": "Cinnamon",
-        "gencolorId": 8,
-        "brand": "Tarkett",
-        "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619637670/Tarkett-TradVinyl-Cinnamon_jplxpi.png"
-      },
-      "carpet": {
-        "id": 1,
-        "name": "Bee's Knees",
-        "colorName": "Dew",
-        "gencolorId": 9,
-        "genpriceId": 5,
-        "brand": "Interface",
-        "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542514/Interface-LetItBee-Dew_adbbot.png",
-        "price": 40,
-        "styleId": 4
-      }
+      "userId": 1
     },
     {
       "id": 2,
@@ -222,8 +217,24 @@
       "carpetId": 5,
       "baseId": 2,
       "name": "Ugly",
-      "userId": null,
+      "userId": 1,
       "id": 5
+    },
+    {
+      "paintId": 3,
+      "carpetId": 4,
+      "baseId": 1,
+      "name": "Uglier",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "paintId": 5,
+      "carpetId": 5,
+      "baseId": 2,
+      "name": "Finish Board 10",
+      "userId": null,
+      "id": 7
     }
   ],
   "pricepoints": [
