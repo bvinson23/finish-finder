@@ -3,7 +3,7 @@ const remoteURL = "http://localhost:8088"
 
 //fetch call that gets a single board based on id
 export const getBoardById = (boardId) => {
-    return fetch(`${remoteURL}/boards/${boardId}`)
+    return fetch(`${remoteURL}/boards/${boardId}?_expand=paint&_expand=base&_expand=carpet`)
         .then(res => res.json())
 }
 

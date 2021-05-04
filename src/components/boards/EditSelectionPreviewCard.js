@@ -1,24 +1,26 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { addBoard } from "../../modules/BoardManager";
+import React, { useState, useEffect } from "react";
+import { Link, useHistory, useParams } from "react-router-dom";
+import { getBoardById, updateBoard } from "../../modules/BoardManager";
 import "./BoardForm.css";
 
-export const SelectionPreviewCard = ({ paint, base, carpet }) => {
+export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
+
     const [board, setBoard] = useState({
         name: "",
         paintId: "",
         carpetId: "",
         baseId: "",
         userId: parseInt(sessionStorage.getItem("app_user_id"))
-    })
+    });
 
     const history = useHistory();
+    const { boardId } = useParams();
 
     const handleFieldChange = evt => {
-        let newBoard = {
-            paintId: paint.id,
-            carpetId: carpet.id,
-            baseId: base.id,
+        let editedBoard = {
+            paintId: board.paintId,
+            carpetId: board.carpetId,
+            baseId: board.baseId,
             name: board.name,
             userId: parseInt(sessionStorage.getItem("app_user_id"))
         }
@@ -26,10 +28,10 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
         if (evt.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
-        newBoard[evt.target.id] = selectedVal
-        setBoard(newBoard)
+        editedBoard[evt.target.id] = selectedVal
+        setBoard(editedBoard)
     }
-    const handleClickSaveBoard = evt => {
+    const updateExistingBoard = evt => {
         evt.preventDefault()
 
         // const paintId = board.paintId
@@ -39,10 +41,17 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
         // if (paintId <= 0 || carpetId <= 0 || baseId <= 0) {
         //     window.alert("Please select one of each finish")
         // } else {
-        addBoard(board)
+        updateBoard(board)
             .then(() => history.push("/"))
         // }
     }
+    useEffect(() => {
+        getBoardById(boardId)
+            .then(board => {
+                console.log(board)
+                setBoard(board);
+            })
+    }, [boardId])
 
     return (
         <form className="boardForm">
@@ -70,9 +79,9 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             <option value="paint.id"></option>
                         </select>
                         <h4>Paint</h4>
-                        <p>{paint.name}</p>
+                        <p>{board.paint?.name}</p>
                         <div className="selection__image">
-                            <img src={paint.image} alt={paint.name}></img>
+                            <img src={board.paint?.image} alt={board.paint?.name}></img>
                         </div>
                     </div>
                 </fieldset>
@@ -84,9 +93,9 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             onChange={handleFieldChange}
                             value={board.baseId} />
                         <h4>Vinyl Base</h4>
-                        <p>{base.name}</p>
+                        <p>{board.base?.name}</p>
                         <div className="selection__image">
-                            <img src={base.image} alt={base.name}></img>
+                            <img src={board.base?.image} alt={board.base?.name}></img>
                         </div>
                     </div>
                 </fieldset>
@@ -98,14 +107,14 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             onChange={handleFieldChange}
                             value={board.carpetId} />
                         <h4>Carpet</h4>
-                        <p>{carpet.name}</p>
+                        <p>{board.carpet?.name}</p>
                         <div className="selection__image">
-                            <img src={carpet.image} alt={carpet.name}></img>
+                            <img src={board.carpet?.image} alt={board.carpet?.name}></img>
                         </div>
                     </div>
                 </fieldset>
                 <Link to={"/"}>
-                    <button type="button" className="button-save" onClick={handleClickSaveBoard}> -Save Board- </button>
+                    <button type="button" className="button-save" onClick={updateExistingBoard}> -Save Board- </button>
                 </Link>
             </aside>
         </form>
