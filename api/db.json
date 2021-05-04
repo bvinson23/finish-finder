@@ -89,6 +89,17 @@
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619797257/Interface-SilverLinings-BlackFade_x4s6z4.png",
       "price": 40,
       "styleId": 2
+    },
+    {
+      "id": 5,
+      "name": "Hand Drawn - Fine Point Tile",
+      "colorName": "Parchment",
+      "gencolorId": 11,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620160893/Shaw-HandDrawn-Parchment_gvstcu.jpg",
+      "price": 20,
+      "styleId": 4
     }
   ],
   "gencolors": [
@@ -158,11 +169,37 @@
   "boards": [
     {
       "id": 1,
-      "name": "Finish Board 1",
+      "name": "Finish Board 6",
       "paintId": 1,
       "carpetId": 1,
       "baseId": 1,
-      "userId": 1
+      "userId": 1,
+      "paint": {
+        "id": 1,
+        "name": "Naval",
+        "gencolorId": 5,
+        "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619454580/colorNaval_yeq21c.png",
+        "brand": "Sherwin-Williams"
+      },
+      "base": {
+        "id": 1,
+        "name": "Traditional Vinyl 1/8",
+        "colorName": "Cinnamon",
+        "gencolorId": 8,
+        "brand": "Tarkett",
+        "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619637670/Tarkett-TradVinyl-Cinnamon_jplxpi.png"
+      },
+      "carpet": {
+        "id": 1,
+        "name": "Bee's Knees",
+        "colorName": "Dew",
+        "gencolorId": 9,
+        "genpriceId": 5,
+        "brand": "Interface",
+        "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542514/Interface-LetItBee-Dew_adbbot.png",
+        "price": 40,
+        "styleId": 4
+      }
     },
     {
       "id": 2,
@@ -179,6 +216,14 @@
       "name": "Test 3",
       "userId": 1,
       "id": 4
+    },
+    {
+      "paintId": 2,
+      "carpetId": 5,
+      "baseId": 2,
+      "name": "Ugly",
+      "userId": null,
+      "id": 5
     }
   ],
   "pricepoints": [
