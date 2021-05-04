@@ -190,11 +190,11 @@
   "boards": [
     {
       "id": 1,
-      "name": "Finish Board 6",
+      "name": "Finish Board 1",
       "paintId": 1,
-      "carpetId": 1,
       "baseId": 1,
-      "userId": 1
+      "carpetId": 1,
+      "userId": 2
     },
     {
       "id": 2,
@@ -233,7 +233,7 @@
       "carpetId": 5,
       "baseId": 2,
       "name": "Finish Board 10",
-      "userId": null,
+      "userId": 1,
       "id": 7
     }
   ],
