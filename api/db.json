@@ -84,6 +84,125 @@
       "gencolorId": 4,
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620166365/colorEspalier_bpwz4x.png",
       "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 7,
+      "name": "Pure White 7005",
+      "gencolorId": 10,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620250952/SW7005.f_fplmdl.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 8,
+      "name": "Extra White 7006",
+      "gencolorId": 10,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620250952/SW7006.f_bu9vr4.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 9,
+      "name": "Blue Chip 6959",
+      "gencolorId": 5,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6959.f_bgccav.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 10,
+      "name": "Urbane Bronze 7048",
+      "gencolorId": 8,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7048.f_c92vmt.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 11,
+      "name": "Icy Lemonade 1667",
+      "gencolorId": 3,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW1667_ns3enp.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 12,
+      "name": "Antique Red 7587",
+      "gencolorId": 1,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7587_bzee4n.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 13,
+      "name": "Gossamer Veil 9165",
+      "gencolorId": 11,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW9165_aigql1.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 14,
+      "name": "Grecian Ivory 7541",
+      "gencolorId": 11,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7541_koqajv.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 15,
+      "name": "Navel 6887",
+      "gencolorId": 2,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6887.f_rgah8i.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 16,
+      "name": "Tangerine 6640",
+      "gencolorId": 2,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6640.f_kzkhoe.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 17,
+      "name": "Bonzai Tint 6436",
+      "gencolorId": 4,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6436.f_wmxuag.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 18,
+      "name": "African Violet 6982",
+      "gencolorId": 6,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6982.f_u3rjn4.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 19,
+      "name": "Wisteria 6822",
+      "gencolorId": 6,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6822.f_xrle5g.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 20,
+      "name": "Black Magic 6991",
+      "gencolorId": 7,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6991.f_kyauoc.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 21,
+      "name": "Black of Night 6993",
+      "gencolorId": 7,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6993.f_tq7vbo.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 22,
+      "name": "Iron Ore 7069",
+      "gencolorId": 9,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7069.f_cxhutd.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 23,
+      "name": "Mindful Gray 7016",
+      "gencolorId": 9,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW7016.f_hpzul7.jpg",
+      "brand": "Sherwin-Williams"
     }
   ],
   "carpets": [
@@ -263,6 +382,22 @@
       "name": "Awesome Board",
       "userId": 3,
       "id": 9
+    },
+    {
+      "paintId": 17,
+      "carpetId": 1,
+      "baseId": 3,
+      "name": "Warby Parker",
+      "userId": 3,
+      "id": 10
+    },
+    {
+      "paintId": 4,
+      "carpetId": 4,
+      "baseId": 3,
+      "name": "Board",
+      "userId": 1,
+      "id": 11
     }
   ],
   "pricepoints": [
