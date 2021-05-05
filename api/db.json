@@ -252,12 +252,12 @@
       "id": 8
     },
     {
-      "paintId": 5,
-      "carpetId": 1,
-      "baseId": 3,
+      "id": 9,
       "name": "Less Ugly",
-      "userId": 2,
-      "id": 9
+      "paintId": 1,
+      "baseId": 3,
+      "carpetId": 1,
+      "userId": 3
     }
   ],
   "pricepoints": [

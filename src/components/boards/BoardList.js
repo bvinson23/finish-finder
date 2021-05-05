@@ -29,12 +29,18 @@ export const BoardList = () => {
                 <button type="button"
                     className="btn"
                     onClick={() => history.push("/boards/create")}>
-                        - Create a Board -
+                    - Create a Board -
                     </button>
             </section>
             <div className="container-cards">
                 <h2>FINISH BOARDS</h2>
-                {boards.map(board => <BoardCard key={board.id} board={board} handleDeleteBoard={handleDeleteBoard} />)}
+                {boards.map(board => {
+                    if (board.userId === parseInt(sessionStorage.getItem("app_user_id"))) {
+                        return (
+                    <BoardCard
+                        key={board.id}
+                        board={board}
+                        handleDeleteBoard={handleDeleteBoard} />)}})}
             </div>
         </>
     )
