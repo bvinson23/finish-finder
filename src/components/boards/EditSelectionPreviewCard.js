@@ -15,7 +15,7 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
 
     const history = useHistory();
     const { boardId } = useParams();
-
+console.log(boardId)
     const handleFieldChange = evt => {
         const editedBoard = { ...board }
         let selectedVal = evt.target.value
@@ -70,7 +70,7 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
 
     return (
         <>
-            {carpet.length <= 0 ?
+            {!(paint.name?.length) > 0 || !(base.name?.length > 0) || !(carpet.name?.length > 0)?
                 <form className="boardForm">
                     <aside className="selections-container">
                         <fieldset>

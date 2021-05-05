@@ -23,8 +23,9 @@ export const BoardCard = ({ board, handleDeleteBoard }) => {
                         <article className="board-paint">
                             <img src={board.paint?.image} alt={board.paint?.name}></img>
                             <div className="details">
-                                <h4>{board.paint?.name}</h4>
+                                <h4>Paint</h4>
                                 <p>Manufacturer: {board.paint?.brand}</p>
+                                <p>Color: {board.paint?.name}</p>
                             </div>
                         </article>
                     </section>
@@ -32,9 +33,9 @@ export const BoardCard = ({ board, handleDeleteBoard }) => {
                         <article className="board-base">
                             <img src={board.base?.image} alt={board.base?.name}></img>
                             <div className="details">
-                                <h4>{board.base?.name}</h4>
-                                <p>Color: {board.base?.colorName}</p>
+                                <h4>Vinyl Base</h4>
                                 <p>Manufacturer: {board.base?.brand}</p>
+                                <p>Color: {board.base?.colorName}</p>
                             </div>
                         </article>
                     </section>
@@ -42,9 +43,10 @@ export const BoardCard = ({ board, handleDeleteBoard }) => {
                         <article className="board-carpet">
                             <img src={board.carpet?.image} alt={board.carpet?.name}></img>
                             <div className="details">
-                                <h4>{board.carpet?.name}</h4>
-                                <p>Color: {board.carpet?.colorName}</p>
+                                <h4>Carpet</h4>
                                 <p>Manufacturer: {board.carpet?.brand}</p>
+                                <p>Style: {board.carpet?.name}</p>
+                                <p>Color: {board.carpet?.colorName}</p>
                                 <p>Price: ${board.carpet?.price}/SY</p>
                                 {/* <p>{board.carpet.styleId}</p> */}
                             </div>
