@@ -258,6 +258,14 @@
       "baseId": 3,
       "carpetId": 1,
       "userId": 3
+    },
+    {
+      "paintId": 4,
+      "carpetId": 2,
+      "baseId": 3,
+      "name": "New Board Baby",
+      "userId": 1,
+      "id": 10
     }
   ],
   "pricepoints": [
