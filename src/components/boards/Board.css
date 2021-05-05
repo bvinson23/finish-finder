@@ -39,8 +39,9 @@ p, h4 {
     margin-top: 25px;
 }
 
-.button-delete {
+.button-delete, .button-edit {
     background-color: #ae9983;
     border: none;
     cursor: pointer;
+    color: black;
 }
