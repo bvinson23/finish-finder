@@ -12,7 +12,7 @@ export const BoardCard = ({ board, handleDeleteBoard }) => {
                         <h2>{board.name}</h2>
                         <p>
                             <Link to={`/boards/${board.id}/edit`}>
-                                <button><FaPen /></button>
+                                <button type="button" className="button-edit"><FaPen /></button>
                             </Link>
                             <button type="button" className="button-delete" onClick={() => handleDeleteBoard(board.id)}><FaTrashAlt /></button>
                         </p>

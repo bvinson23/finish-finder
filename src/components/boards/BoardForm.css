@@ -64,10 +64,6 @@ button {
     visibility: hidden;
 }
 
-.button-delete {
-    color: black;
-}
-
 .select-button {
     justify-self: right;
 }
