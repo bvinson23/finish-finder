@@ -32,6 +32,14 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
     const handleClickSaveBoard = evt => {
         evt.preventDefault()
 
+        const newBoard = {
+            paintId: paint.id,
+            carpetId: carpet.id,
+            baseId: base.id,
+            name: board.name,
+            userId: parseInt(sessionStorage.getItem("app_user_id"))
+        }
+
         // const paintId = board.paintId
         // const carpetId = board.carpetId
         // const baseId = board.baseId
@@ -39,7 +47,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
         // if (paintId <= 0 || carpetId <= 0 || baseId <= 0) {
         //     window.alert("Please select one of each finish")
         // } else {
-        addBoard(board)
+        addBoard(newBoard)
             .then(() => history.push("/"))
         // }
     }
