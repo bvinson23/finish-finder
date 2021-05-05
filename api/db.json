@@ -9,6 +9,11 @@
       "email": "taylor@taylor.com",
       "name": "Taylor Slay",
       "id": 2
+    },
+    {
+      "email": "luna@kitty.com",
+      "name": "Luna Vinson",
+      "id": 3
     }
   ],
   "bases": [
