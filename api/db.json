@@ -205,10 +205,10 @@
   "boards": [
     {
       "id": 1,
-      "name": "Finish Board 15",
-      "paintId": 1,
-      "baseId": 1,
-      "carpetId": 1,
+      "name": "Finish Board 20",
+      "paintId": 5,
+      "baseId": 3,
+      "carpetId": 4,
       "userId": 2
     },
     {

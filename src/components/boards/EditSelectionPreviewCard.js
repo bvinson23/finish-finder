@@ -15,7 +15,7 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
 
     const history = useHistory();
     const { boardId } = useParams();
-console.log(boardId)
+    
     const handleFieldChange = evt => {
         const editedBoard = { ...board }
         let selectedVal = evt.target.value
@@ -31,9 +31,9 @@ console.log(boardId)
         const editedBoard = {
             id: boardId,
             name: board.name,
-            paintId: board.paintId,
-            baseId: board.baseId,
-            carpetId: board.carpetId,
+            paintId: !(paint.name?.length) > 0 ? board.paintId : paint.id,
+            baseId: !(base.name?.length) > 0 ? board.baseId : base.id,
+            carpetId: !(carpet.name?.length) > 0 ? board.carpetId : carpet.id,
             userId: parseInt(sessionStorage.getItem("app_user_id"))
         }
         updateBoard(editedBoard)
@@ -47,45 +47,24 @@ console.log(boardId)
             })
     }, [boardId])
 
-    // useEffect(() => {
-    //     getBoardById(boardId)
-    //         .then(board => {
-    //             setBoard(board)
-    //         })
-    // }, [paint])
-
-    // useEffect(() => {
-    //     getBoardById(boardId)
-    //         .then(board => {
-    //             setBoard(board)
-    //         })
-    // }, [base])
-
-    // useEffect(() => {
-    //     getBoardById(boardId)
-    //         .then(board => {
-    //             setBoard(board)
-    //         })
-    // }, [carpet])
-
     return (
         <>
-            {!(paint.name?.length) > 0 || !(base.name?.length > 0) || !(carpet.name?.length > 0)?
-                <form className="boardForm">
-                    <aside className="selections-container">
-                        <fieldset>
-                            <div className="form-group">
-                                <label htmlFor="name">Title:</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    onChange={handleFieldChange}
-                                    required autoFocus
-                                    className="form-control"
-                                    placeholder="Name your board"
-                                    value={board.name} />
-                            </div>
-                        </fieldset>
+            <form className="boardForm">
+                <aside className="selections-container">
+                    <fieldset>
+                        <div className="form-group">
+                            <label htmlFor="name">Title:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                onChange={handleFieldChange}
+                                required autoFocus
+                                className="form-control"
+                                placeholder="Name your board"
+                                value={board.name} />
+                        </div>
+                    </fieldset>
+                    {!(paint.name?.length) > 0 ?
                         <fieldset>
                             <div className="selection__paint">
                                 <select
@@ -96,60 +75,12 @@ console.log(boardId)
                                     <option value="paint.id"></option>
                                 </select>
                                 <h4>Paint</h4>
-                                <p>{board.paint?.name}</p>
+                                <p><strong>{board.paint?.name}</strong></p>
                                 <div className="selection__image">
                                     <img src={board.paint?.image} alt={board.paint?.name}></img>
                                 </div>
                             </div>
-                        </fieldset>
-                        <fieldset>
-                            <div className="selection__base">
-                                <select
-                                    id="base"
-                                    className="hide-me"
-                                    onChange={handleFieldChange}
-                                    value={board.baseId} />
-                                <h4>Vinyl Base</h4>
-                                <p>{board.base?.name}</p>
-                                <div className="selection__image">
-                                    <img src={board.base?.image} alt={board.base?.name}></img>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <div className="selection__carpet">
-                                <select
-                                    id="carpet"
-                                    className="hide-me"
-                                    onChange={handleFieldChange}
-                                    value={board.carpetId} />
-                                <h4>Carpet</h4>
-                                <p>{board.carpet?.name}</p>
-                                <div className="selection__image">
-                                    <img src={board.carpet?.image} alt={board.carpet?.name}></img>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <Link to={"/"}>
-                            <button type="button" className="button-save" onClick={updateExistingBoard}> -Save Board- </button>
-                        </Link>
-                    </aside>
-                </form> :
-                <form className="boardForm">
-                    <aside className="selections-container">
-                        <fieldset>
-                            <div className="form-group">
-                                <label htmlFor="name">Title:</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    onChange={handleFieldChange}
-                                    required autoFocus
-                                    className="form-control"
-                                    placeholder="Name your board"
-                                    value={board.name} />
-                            </div>
-                        </fieldset>
+                        </fieldset> :
                         <fieldset>
                             <div className="selection__paint">
                                 <select
@@ -160,12 +91,14 @@ console.log(boardId)
                                     <option value="paint.id"></option>
                                 </select>
                                 <h4>Paint</h4>
-                                <p>{paint.name}</p>
+                                <p><strong>{paint.name}</strong></p>
                                 <div className="selection__image">
                                     <img src={paint.image} alt={paint.name}></img>
                                 </div>
                             </div>
                         </fieldset>
+                    }
+                    {!(base.name?.length) > 0 ?
                         <fieldset>
                             <div className="selection__base">
                                 <select
@@ -174,12 +107,28 @@ console.log(boardId)
                                     onChange={handleFieldChange}
                                     value={board.baseId} />
                                 <h4>Vinyl Base</h4>
-                                <p>{base.name}</p>
+                                <p><strong>{board.base?.name}</strong></p>
+                                <div className="selection__image">
+                                    <img src={board.base?.image} alt={board.base?.name}></img>
+                                </div>
+                            </div>
+                        </fieldset> :
+                        <fieldset>
+                            <div className="selection__base">
+                                <select
+                                    id="base"
+                                    className="hide-me"
+                                    onChange={handleFieldChange}
+                                    value={board.baseId} />
+                                <h4>Vinyl Base</h4>
+                                <p><strong>{base.name}</strong></p>
                                 <div className="selection__image">
                                     <img src={base.image} alt={base.name}></img>
                                 </div>
                             </div>
                         </fieldset>
+                    }
+                    {!(carpet.name?.length) > 0 ?
                         <fieldset>
                             <div className="selection__carpet">
                                 <select
@@ -188,18 +137,32 @@ console.log(boardId)
                                     onChange={handleFieldChange}
                                     value={board.carpetId} />
                                 <h4>Carpet</h4>
-                                <p>{carpet.name}</p>
+                                <p><strong>{board.carpet?.name}</strong></p>
+                                <div className="selection__image">
+                                    <img src={board.carpet?.image} alt={board.carpet?.name}></img>
+                                </div>
+                            </div>
+                        </fieldset> :
+                        <fieldset>
+                            <div className="selection__carpet">
+                                <select
+                                    id="carpet"
+                                    className="hide-me"
+                                    onChange={handleFieldChange}
+                                    value={board.carpetId} />
+                                <h4>Carpet</h4>
+                                <p><strong>{carpet.name}</strong></p>
                                 <div className="selection__image">
                                     <img src={carpet.image} alt={carpet.name}></img>
                                 </div>
                             </div>
                         </fieldset>
-                        <Link to={"/"}>
-                            <button type="button" className="button-save" onClick={updateExistingBoard}> -Save Board- </button>
-                        </Link>
-                    </aside>
-                </form>
-            }
+                    }
+                    <Link to={"/"}>
+                        <button type="button" className="button-save" onClick={updateExistingBoard}> -Save Board- </button>
+                    </Link>
+                </aside>
+            </form>
         </>
     )
 }
