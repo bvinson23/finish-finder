@@ -9,7 +9,8 @@ import { Register } from "./auth/Register";
 import { PaintForm } from "./paints/PaintForm";
 import { BaseForm } from "./bases/BaseForm";
 import { CarpetForm } from "./carpets/CarpetForm";
-import { BoardForm } from "./boards/BoardForm"
+import { BoardForm } from "./boards/BoardForm";
+import { BoardEditForm } from "./boards/BoardEditForm";
 
 export const ApplicationViews = () => {
     return (
@@ -22,6 +23,11 @@ export const ApplicationViews = () => {
             {/*Render the form for creating a board when http://localhost:3000/boards/create/ */}
             <Route exact path="/boards/create/">
                 <BoardForm />
+            </Route>
+
+            {/*Render the form for editing a board when http://localhost:3000/boards/1/edit */}
+            <Route path="/boards/:boardId(\d+)/edit">
+                <BoardEditForm />
             </Route>
 
             {/*Render the form for creating the paint section of the board when http://localhost:3000/boards/create/paint */}

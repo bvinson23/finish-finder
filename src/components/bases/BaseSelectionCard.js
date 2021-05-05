@@ -6,7 +6,7 @@ export const BaseSelectionCard = ({ selection, handleSelectBase }) => {
         <div className="selection-box">
             <div className="preview-area">
                 <div>
-                    <h4>{selection.name}</h4>
+                    <h5>{selection.name}</h5>
                     <p>Manufacturer: {selection.brand}</p>
                     <p>Color: {selection.colorName}</p>
                 </div>

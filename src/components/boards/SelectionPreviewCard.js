@@ -27,7 +27,6 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
             selectedVal = parseInt(selectedVal)
         }
         newBoard[evt.target.id] = selectedVal
-        console.log(selectedVal)
         setBoard(newBoard)
     }
     const handleClickSaveBoard = evt => {
@@ -71,7 +70,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             <option value="paint.id"></option>
                         </select>
                         <h4>Paint</h4>
-                        <p>{paint.name}</p>
+                        <p><strong>{paint.name}</strong></p>
                         <div className="selection__image">
                             <img src={paint.image} alt={paint.name}></img>
                         </div>
@@ -85,7 +84,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             onChange={handleFieldChange}
                             value={board.baseId} />
                         <h4>Vinyl Base</h4>
-                        <p>{base.name}</p>
+                        <p><strong>{base.name}</strong></p>
                         <div className="selection__image">
                             <img src={base.image} alt={base.name}></img>
                         </div>
@@ -99,7 +98,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             onChange={handleFieldChange}
                             value={board.carpetId} />
                         <h4>Carpet</h4>
-                        <p>{carpet.name}</p>
+                        <p><strong>{carpet.name}</strong></p>
                         <div className="selection__image">
                             <img src={carpet.image} alt={carpet.name}></img>
                         </div>

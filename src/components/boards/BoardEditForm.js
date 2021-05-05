@@ -6,10 +6,10 @@ import { getAllCarpets, getAllPrices } from "../../modules/CarpetManager";
 import { PaintSelectionCard } from "../paints/PaintSelectionCard";
 import { BaseSelectionCard } from "../bases/BaseSelectionCard";
 import { CarpetSelectionCard } from "../carpets/CarpetSelectionCard"
-import { SelectionPreviewCard } from "./SelectionPreviewCard";
+import { EditSelectionPreviewCard } from "./EditSelectionPreviewCard";
 import "./BoardForm.css";
 
-export const BoardForm = () => {
+export const BoardEditForm = () => {
     const [paint, setPaint] = useState({});
     const [paintSelection, setPaintSelection] = useState({});
     const [paintResults, setPaintResults] = useState([]);
@@ -271,7 +271,7 @@ export const BoardForm = () => {
 
 
                     <div className="preview-card">
-                        <SelectionPreviewCard
+                        <EditSelectionPreviewCard
                             paint={paint}
                             base={base}
                             carpet={carpet} />
@@ -281,3 +281,4 @@ export const BoardForm = () => {
         </>
     )
 }
+
