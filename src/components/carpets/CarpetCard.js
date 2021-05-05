@@ -6,10 +6,11 @@ export const CarpetCard = ({ carpet }) => {
         <>
             <div className="carpet-container">
                 <section className="carpet">
-                    <h3>Name: {carpet.name}</h3>
+                    <h3>{carpet.name} - {carpet.colorName}</h3>
                     <p>Manufacturer: {carpet.brand}</p>
+                    <p>Style: {carpet.name}</p>
                     <p>Color: {carpet.colorName}</p>
-                    <p>Style: {carpet.style.name}</p>
+                    <p>Pattern: {carpet.style.name}</p>
                     <p>Price: ${carpet.price}/SY</p>
                 </section>
                 <div className="image-container">
