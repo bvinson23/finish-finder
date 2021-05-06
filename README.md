@@ -27,3 +27,7 @@ When a user first opens the app, they will be prompted to log in or register for
 Once the user is authenticated, the user will be given the opportunity to create a new board by clicking the 'Create a Board' button. This will bring the user to the board creation page.
 
 ![Boardform](/src/images/boardform.png)
+
+From here, the user will start by filtering the paints by color by using the dropdown of colors. Once the user has selected a color, all paints with a matching color are displayed.
+
+![Color Selection](/src/images/colorselection.png)
