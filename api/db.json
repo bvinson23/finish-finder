@@ -447,6 +447,14 @@
       "name": "Groove Life",
       "userId": 2,
       "id": 12
+    },
+    {
+      "paintId": 9,
+      "carpetId": 4,
+      "baseId": 3,
+      "name": "Happy",
+      "userId": 2,
+      "id": 13
     }
   ],
   "pricepoints": [

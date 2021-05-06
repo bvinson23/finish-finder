@@ -158,7 +158,7 @@ export const BoardForm = () => {
                 </div>
                 <div className="everything-else">
                     <div className="selection-container">
-                        {!paint ?
+                        {!(paint.name) ?
                             <>
                                 <div className="form-container">
                                     <h4>Choose a Paint:</h4>
@@ -198,7 +198,7 @@ export const BoardForm = () => {
 
                                 
                             </>}
-                        {paint && !base ?
+                        {paint.name && !base.name ?
                             <>
                             <div className="form-container">
                                     <h4>Choose a Vinyl Base:</h4>
@@ -235,7 +235,7 @@ export const BoardForm = () => {
                             <>
                                 
                             </>}
-                            {base && !carpet ? 
+                            {base.name && !carpet.name ? 
                             <>
                             <div className="form-container">
                             <h4>Choose a Carpet:</h4>
