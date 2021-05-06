@@ -36,6 +36,8 @@ export const BoardForm = () => {
                     let colorPaints = res.filter(paint => {
                         if (paint.gencolorId === color) {
                             return true
+                        } else {
+                            return false
                         }
                     })
                     setPaintResults(colorPaints)
@@ -61,6 +63,8 @@ export const BoardForm = () => {
                     let colorBases = res.filter(base => {
                         if (base.gencolorId === color) {
                             return true
+                        } else {
+                            return false
                         }
                     })
                     setBaseResults(colorBases)
@@ -90,6 +94,8 @@ export const BoardForm = () => {
                     let colorPriceCarpets = res.filter(carpet => {
                         if (carpet.gencolorId === color && carpet.genpriceId === price) {
                             return true
+                        } else {
+                            return false
                         }
                     })
                     setCarpetResults(colorPriceCarpets)

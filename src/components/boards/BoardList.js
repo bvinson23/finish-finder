@@ -40,7 +40,9 @@ export const BoardList = () => {
                     <BoardCard
                         key={board.id}
                         board={board}
-                        handleDeleteBoard={handleDeleteBoard} />)}})}
+                        handleDeleteBoard={handleDeleteBoard} />)} else {
+                            return false
+                        }})}
             </div>
         </>
     )

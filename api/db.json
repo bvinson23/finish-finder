@@ -301,7 +301,7 @@
       "gencolorId": 5,
       "genpriceId": 2,
       "brand": "Shaw",
-      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620309500/5T098_99880_24x24_1_fup8ba.jpg",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620314463/I0459_00450_MAIN_yeiolf.jpg",
       "price": 20,
       "styleId": 4
     }
@@ -405,9 +405,9 @@
     },
     {
       "id": 7,
-      "name": "Finish Board Blah 2",
+      "name": "Finish Board Blah 3",
       "paintId": 19,
-      "baseId": 2,
+      "baseId": 3,
       "carpetId": 5,
       "userId": 2
     },
@@ -436,12 +436,12 @@
       "id": 11
     },
     {
-      "id": 12,
-      "name": "New Board Baby 2",
-      "paintId": 16,
+      "paintId": 11,
+      "carpetId": 1,
       "baseId": 3,
-      "carpetId": 8,
-      "userId": 2
+      "name": "Groove Life",
+      "userId": 2,
+      "id": 12
     }
   ],
   "pricepoints": [
