@@ -13,6 +13,7 @@ export const BoardEditForm = () => {
     const [paint, setPaint] = useState({});
     const [paintSelection, setPaintSelection] = useState({});
     const [paintResults, setPaintResults] = useState([]);
+    const [paintCardIsVisible, setPaintCardIsVisible] = useState(false)
     const [base, setBase] = useState({});
     const [baseSelection, setBaseSelection] = useState({});
     const [baseResults, setBaseResults] = useState([]);
@@ -47,6 +48,10 @@ export const BoardEditForm = () => {
 
     const handleSelectPaint = (selection) => {
         setPaint(selection)
+    }
+
+    const togglePaintCard = () => {
+        setPaintCardIsVisible(!paintCardIsVisible)
     }
 
     //------Base functions------
@@ -115,7 +120,6 @@ export const BoardEditForm = () => {
         paintSelectionResults(paintSelection)
     }, [paintSelection])
 
-
     //------Base useEffects------
     useEffect(() => {
         handleSelectBase(base)
@@ -157,8 +161,9 @@ export const BoardEditForm = () => {
                 </div>
                 <div className="everything-else">
                     <div className="selection-container">
-                        {!paint.name ?
-                            <>
+                        <button onClick={togglePaintCard}>Edit Paint</button>
+                        <button>Edit Vinyl Base</button>
+                        <button>Edit Carpet</button>
                                 <div className="form-container">
                                     <h4>Choose a Paint:</h4>
                                     <div className="filter-dropdown">
@@ -192,10 +197,8 @@ export const BoardEditForm = () => {
                                                 />
                                             )}
                                     </div>
-                                </div> </> : <></>}
+                                </div>
 
-                        {paint.name && !base.name ?
-                            <>
                                 <div className="form-container">
                                     <h4>Choose a Vinyl Base:</h4>
                                     <div className="filter-dropdown">
@@ -227,58 +230,56 @@ export const BoardEditForm = () => {
                                                 handleSelectBase={handleSelectBase}
                                             />
                                         )}
-                                </div></> : <></>}
+                                </div>
 
-                                {base.name && !carpet.name ?
-                                <>
-                        <div className="form-container">
-                            <h4>Choose a Carpet:</h4>
-                            <div className="filter-dropdown">
-                                <label htmlFor="color">Color</label>
-                                <select value={colorSelection}
-                                    name="gencolorId"
-                                    id="gencolorId"
-                                    onChange={handleCarpetColorSelection}
-                                    className="filter-control">
-                                    <option value="0">Select a color</option>
-                                    {colors.map(color => (
-                                        <option key={color.id} value={color.id}>
-                                            {color.name}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
+                                <div className="form-container">
+                                    <h4>Choose a Carpet:</h4>
+                                    <div className="filter-dropdown">
+                                        <label htmlFor="color">Color</label>
+                                        <select value={colorSelection}
+                                            name="gencolorId"
+                                            id="gencolorId"
+                                            onChange={handleCarpetColorSelection}
+                                            className="filter-control">
+                                            <option value="0">Select a color</option>
+                                            {colors.map(color => (
+                                                <option key={color.id} value={color.id}>
+                                                    {color.name}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
 
-                            <div className="filter-dropdown">
-                                <label htmlFor="price">Price</label>
-                                <select value={priceSelection}
-                                    name="gencolorId"
-                                    id="gencolorId"
-                                    onChange={handlePriceSelection}
-                                    className="filter-control">
-                                    <option value="0">Select a price point</option>
-                                    {prices.map(price => (
-                                        <option key={price.id} value={price.id}>
-                                            {price.name}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
+                                    <div className="filter-dropdown">
+                                        <label htmlFor="price">Price</label>
+                                        <select value={priceSelection}
+                                            name="gencolorId"
+                                            id="gencolorId"
+                                            onChange={handlePriceSelection}
+                                            className="filter-control">
+                                            <option value="0">Select a price point</option>
+                                            {prices.map(price => (
+                                                <option key={price.id} value={price.id}>
+                                                    {price.name}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                </div>
 
-                        <div className="preview-title">
-                            <h3>Preview Area</h3>
-                        </div>
-                        <div className="filter-results">
-                            {carpetResults.length === 0 ? <div></div> :
-                                carpetResults.map(selection =>
-                                    <CarpetSelectionCard
-                                        key={selection.id}
-                                        selection={selection}
-                                        handleSelectCarpet={handleSelectCarpet}
-                                    />
-                                )}
-                        </div> </> : <></>}
+                                <div className="preview-title">
+                                    <h3>Preview Area</h3>
+                                </div>
+                                <div className="filter-results">
+                                    {carpetResults.length === 0 ? <div></div> :
+                                        carpetResults.map(selection =>
+                                            <CarpetSelectionCard
+                                                key={selection.id}
+                                                selection={selection}
+                                                handleSelectCarpet={handleSelectCarpet}
+                                            />
+                                        )}
+                                </div>
                     </div>
 
 

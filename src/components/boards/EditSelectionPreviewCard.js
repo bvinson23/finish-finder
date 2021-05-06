@@ -101,7 +101,6 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
                             </div>
                         </fieldset>
                     }
-                    <button>Edit Paint</button>
                     {!(base.name?.length) > 0 ?
                         <fieldset>
                             <div className="selection__base">
@@ -132,7 +131,6 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
                             </div>
                         </fieldset>
                     }
-                    <button>Edit Vinyl Base</button>
                     {!(carpet.name?.length) > 0 ?
                         <fieldset>
                             <div className="selection__carpet">
@@ -163,7 +161,6 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
                             </div>
                         </fieldset>
                     }
-                    <button>Edit Carpet</button>
                 </aside>
             </form>
         </>
