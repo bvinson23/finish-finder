@@ -405,9 +405,9 @@
     },
     {
       "id": 7,
-      "name": "Finish Board Blah 2",
+      "name": "Finish Board Blah 3",
       "paintId": 19,
-      "baseId": 2,
+      "baseId": 3,
       "carpetId": 5,
       "userId": 2
     },
@@ -434,6 +434,14 @@
       "name": "Board",
       "userId": 1,
       "id": 11
+    },
+    {
+      "paintId": 11,
+      "carpetId": 1,
+      "baseId": 3,
+      "name": "Groove Life",
+      "userId": 2,
+      "id": 12
     }
   ],
   "pricepoints": [
