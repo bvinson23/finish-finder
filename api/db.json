@@ -455,6 +455,14 @@
       "name": "Happy",
       "userId": 2,
       "id": 13
+    },
+    {
+      "paintId": 18,
+      "carpetId": 3,
+      "baseId": 3,
+      "name": "Wedding Chapel",
+      "userId": 2,
+      "id": 14
     }
   ],
   "pricepoints": [
