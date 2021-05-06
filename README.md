@@ -31,3 +31,7 @@ Once the user is authenticated, the user will be given the opportunity to create
 From here, the user will start by filtering the paints by color by using the dropdown of colors. Once the user has selected a color, all paints with a matching color are displayed.
 
 ![Color Selection](/src/images/colorselection.png)
+
+When the user clicks the 'Add Paint' button, the paint will appear in the selections area on the right side of the page. The user will then do the same actions for the other finishes, until they have selected one finish of each. The user can then name their board.
+
+![Selection Preview](/src/images/selectionpreview.png)
