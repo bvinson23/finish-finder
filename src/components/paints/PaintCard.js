@@ -6,7 +6,7 @@ export const PaintCard = ({ paint }) => {
         <>
             <div className="paint-container">
                 <section className="paint">
-                    <h3>Name: {paint.name}</h3>
+                    <h3>{paint.name}</h3>
                     <p>Manufacturer: {paint.brand}</p>
                 </section>
                 <div className="image-container">

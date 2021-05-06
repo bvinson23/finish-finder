@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export const PaintSelectionCard = ({ selection, handleSelectPaint }) => {
     return (
@@ -15,12 +15,12 @@ export const PaintSelectionCard = ({ selection, handleSelectPaint }) => {
                 <img src={selection.image} alt={selection.name}></img>
             </div>
             <div className="navigation-buttons">
-                <Link to={"/"}>
+                {/* <Link to={"/"}>
                     <button type="button" className="button-back"> -Back- </button>
                 </Link>
                 <Link to={"/boards/create/base"}>
                     <button type="button" className="button-next"> -Next- </button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     )

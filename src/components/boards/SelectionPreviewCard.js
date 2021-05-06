@@ -92,7 +92,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             onChange={handleFieldChange}
                             value={board.baseId} />
                         <h4>Vinyl Base</h4>
-                        <p><strong>{base.name}</strong></p>
+                        <p><strong>{base.colorName}</strong></p>
                         <div className="selection__image">
                             <img src={base.image} alt={base.name}></img>
                         </div>
@@ -106,7 +106,7 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             onChange={handleFieldChange}
                             value={board.carpetId} />
                         <h4>Carpet</h4>
-                        <p><strong>{carpet.name}</strong></p>
+                        <p><strong>{carpet.name} - {carpet.colorName}</strong></p>
                         <div className="selection__image">
                             <img src={carpet.image} alt={carpet.name}></img>
                         </div>

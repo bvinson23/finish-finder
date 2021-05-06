@@ -30,3 +30,7 @@ h3 {
 h2 {
     font-family: 'Poiret One', cursive;
 }
+
+p {
+    line-height: 1.2;
+}
