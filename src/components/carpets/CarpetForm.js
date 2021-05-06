@@ -29,6 +29,8 @@ export const CarpetForm = () => {
                     let colorPriceCarpets = res.filter(carpet => {
                         if (carpet.gencolorId === color && carpet.genpriceId === price) {
                             return true
+                        } else {
+                            return false
                         }
                     })
                     setCarpetResults(colorPriceCarpets)

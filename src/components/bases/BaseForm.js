@@ -21,6 +21,8 @@ export const BaseForm = () => {
                 let colorBases = res.filter(base => {
                     if (base.gencolorId === color) {
                         return true
+                    } else {
+                        return false
                     }
                 })
                 setBaseResults(colorBases)

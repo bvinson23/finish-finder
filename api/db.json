@@ -434,14 +434,6 @@
       "name": "Board",
       "userId": 1,
       "id": 11
-    },
-    {
-      "id": 12,
-      "name": "New Board Baby 2",
-      "paintId": 16,
-      "baseId": 3,
-      "carpetId": 8,
-      "userId": 2
     }
   ],
   "pricepoints": [
