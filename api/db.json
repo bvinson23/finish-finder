@@ -455,6 +455,14 @@
       "name": "Happy",
       "userId": 2,
       "id": 13
+    },
+    {
+      "id": 14,
+      "name": "My Board",
+      "paintId": 17,
+      "baseId": 3,
+      "carpetId": 6,
+      "userId": 2
     }
   ],
   "pricepoints": [
