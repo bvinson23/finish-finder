@@ -13,7 +13,7 @@ export const BoardEditForm = () => {
     const [paint, setPaint] = useState({});
     const [paintSelection, setPaintSelection] = useState({});
     const [paintResults, setPaintResults] = useState([]);
-    const [paintCardIsVisible, setPaintCardIsVisible] = useState(false)
+    // const [paintCardIsVisible, setPaintCardIsVisible] = useState(false)
     const [base, setBase] = useState({});
     const [baseSelection, setBaseSelection] = useState({});
     const [baseResults, setBaseResults] = useState([]);
@@ -50,9 +50,9 @@ export const BoardEditForm = () => {
         setPaint(selection)
     }
 
-    const togglePaintCard = () => {
-        setPaintCardIsVisible(!paintCardIsVisible)
-    }
+    // const togglePaintCard = () => {
+    //     setPaintCardIsVisible(!paintCardIsVisible)
+    // }
 
     //------Base functions------
     const handleBaseColorSelection = (evt) => {
@@ -161,9 +161,9 @@ export const BoardEditForm = () => {
                 </div>
                 <div className="everything-else">
                     <div className="selection-container">
-                        <button onClick={togglePaintCard}>Edit Paint</button>
+                        {/* <button onClick={togglePaintCard}>Edit Paint</button>
                         <button>Edit Vinyl Base</button>
-                        <button>Edit Carpet</button>
+                        <button>Edit Carpet</button> */}
                                 <div className="form-container">
                                     <h4>Choose a Paint:</h4>
                                     <div className="filter-dropdown">

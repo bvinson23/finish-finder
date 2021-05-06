@@ -410,7 +410,7 @@
     },
     {
       "id": 7,
-      "name": "Finish Board Blah 3",
+      "name": "Finish Board 3",
       "paintId": 19,
       "baseId": 3,
       "carpetId": 5,
@@ -455,14 +455,6 @@
       "name": "Happy",
       "userId": 2,
       "id": 13
-    },
-    {
-      "paintId": 18,
-      "carpetId": 3,
-      "baseId": 3,
-      "name": "Wedding Chapel",
-      "userId": 2,
-      "id": 14
     }
   ],
   "pricepoints": [
