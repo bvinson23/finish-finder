@@ -13,6 +13,11 @@
     {
       "email": "luna@kitty.com",
       "name": "Luna Vinson",
+      "id": 4
+    },
+    {
+      "email": "olive@kitty.com",
+      "name": "Olive Vinson",
       "id": 3
     }
   ],
@@ -84,6 +89,125 @@
       "gencolorId": 4,
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620166365/colorEspalier_bpwz4x.png",
       "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 7,
+      "name": "Pure White 7005",
+      "gencolorId": 10,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620250952/SW7005.f_fplmdl.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 8,
+      "name": "Extra White 7006",
+      "gencolorId": 10,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620250952/SW7006.f_bu9vr4.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 9,
+      "name": "Blue Chip 6959",
+      "gencolorId": 5,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6959.f_bgccav.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 10,
+      "name": "Urbane Bronze 7048",
+      "gencolorId": 8,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7048.f_c92vmt.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 11,
+      "name": "Icy Lemonade 1667",
+      "gencolorId": 3,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW1667_ns3enp.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 12,
+      "name": "Antique Red 7587",
+      "gencolorId": 1,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7587_bzee4n.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 13,
+      "name": "Gossamer Veil 9165",
+      "gencolorId": 11,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW9165_aigql1.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 14,
+      "name": "Grecian Ivory 7541",
+      "gencolorId": 11,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7541_koqajv.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 15,
+      "name": "Navel 6887",
+      "gencolorId": 2,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6887.f_rgah8i.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 16,
+      "name": "Tangerine 6640",
+      "gencolorId": 2,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6640.f_kzkhoe.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 17,
+      "name": "Bonzai Tint 6436",
+      "gencolorId": 4,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6436.f_wmxuag.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 18,
+      "name": "African Violet 6982",
+      "gencolorId": 6,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6982.f_u3rjn4.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 19,
+      "name": "Wisteria 6822",
+      "gencolorId": 6,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6822.f_xrle5g.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 20,
+      "name": "Black Magic 6991",
+      "gencolorId": 7,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6991.f_kyauoc.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 21,
+      "name": "Black of Night 6993",
+      "gencolorId": 7,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW6993.f_tq7vbo.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 22,
+      "name": "Iron Ore 7069",
+      "gencolorId": 9,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253536/SW7069.f_cxhutd.jpg",
+      "brand": "Sherwin-Williams"
+    },
+    {
+      "id": 23,
+      "name": "Mindful Gray 7016",
+      "gencolorId": 9,
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620253535/SW7016.f_hpzul7.jpg",
+      "brand": "Sherwin-Williams"
     }
   ],
   "carpets": [
@@ -105,7 +229,7 @@
       "gencolorId": 7,
       "genpriceId": 3,
       "brand": "Interface",
-      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619542914/Interface-StreetSmart-Passageway_dp1dm9.png",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620249877/Interface-StreetSmart-Passageway_egushl.jpg",
       "price": 30,
       "styleId": 2
     },
@@ -116,29 +240,73 @@
       "gencolorId": 11,
       "genpriceId": 3,
       "brand": "Interface",
-      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619622075/Interface-OpenAir-401-Linen_je1oj3.png",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620250046/Interface-OpenAir-401-Linen_sf6wfc.jpg",
       "price": 30,
       "styleId": 1
     },
     {
       "id": 4,
-      "name": "Silver Linings",
+      "name": "Silver Linings 930",
       "colorName": "Black Fade",
       "gencolorId": 7,
       "genpriceId": 5,
       "brand": "Interface",
-      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1619797257/Interface-SilverLinings-BlackFade_x4s6z4.png",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620249635/Interface-SilverLinings-BlackFade_zh1ls4.jpg",
       "price": 40,
       "styleId": 2
     },
     {
       "id": 5,
-      "name": "Hand Drawn - Fine Point Tile",
+      "name": "Fine Point",
       "colorName": "Parchment",
       "gencolorId": 11,
       "genpriceId": 2,
       "brand": "Shaw",
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620160893/Shaw-HandDrawn-Parchment_gvstcu.jpg",
+      "price": 20,
+      "styleId": 4
+    },
+    {
+      "id": 6,
+      "name": "Trace",
+      "colorName": "Cork",
+      "gencolorId": 11,
+      "genpriceId": 1,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620308728/5T005_83170_24x24_1_wskt3n.jpg",
+      "price": 18,
+      "styleId": 2
+    },
+    {
+      "id": 7,
+      "name": "Offset",
+      "colorName": "Glassy Green",
+      "gencolorId": 4,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620309057/5T296_94335_24x24_1_krgll0.jpg",
+      "price": 26,
+      "styleId": 2
+    },
+    {
+      "id": 8,
+      "name": "Plain Weave",
+      "colorName": "Annato",
+      "gencolorId": 1,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620309500/5T098_99880_24x24_1_fup8ba.jpg",
+      "price": 30,
+      "styleId": 4
+    },
+    {
+      "id": 9,
+      "name": "Reason",
+      "colorName": "Blueprint",
+      "gencolorId": 5,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620314463/I0459_00450_MAIN_yeiolf.jpg",
       "price": 20,
       "styleId": 4
     }
@@ -233,36 +401,52 @@
       "id": 4
     },
     {
-      "paintId": 2,
-      "carpetId": 5,
-      "baseId": 2,
+      "id": 5,
       "name": "Ugly",
-      "userId": 1,
-      "id": 5
+      "paintId": 4,
+      "baseId": 3,
+      "carpetId": 4,
+      "userId": 1
     },
     {
       "id": 7,
-      "name": "Finish Board Blah",
-      "paintId": 5,
-      "baseId": 2,
+      "name": "Finish Board Blah 3",
+      "paintId": 19,
+      "baseId": 3,
       "carpetId": 5,
       "userId": 2
     },
     {
-      "paintId": 6,
-      "carpetId": 4,
-      "baseId": 1,
-      "name": "Test 4",
-      "userId": 2,
-      "id": 8
+      "paintId": 1,
+      "carpetId": 2,
+      "baseId": 3,
+      "name": "Awesome Board",
+      "userId": 3,
+      "id": 9
     },
     {
-      "paintId": 5,
+      "paintId": 17,
       "carpetId": 1,
       "baseId": 3,
-      "name": "Less Ugly",
+      "name": "Warby Parker",
+      "userId": 3,
+      "id": 10
+    },
+    {
+      "paintId": 4,
+      "carpetId": 4,
+      "baseId": 3,
+      "name": "Board",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "paintId": 11,
+      "carpetId": 1,
+      "baseId": 3,
+      "name": "Groove Life",
       "userId": 2,
-      "id": 9
+      "id": 12
     }
   ],
   "pricepoints": [

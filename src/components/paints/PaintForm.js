@@ -21,6 +21,8 @@ export const PaintForm = () => {
                     let colorPaints = res.filter(paint => {
                         if (paint.gencolorId === color) {
                             return true
+                        } else {
+                            return false
                         }
                     })
                     setPaintResults(colorPaints)

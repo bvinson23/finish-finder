@@ -34,12 +34,15 @@ export const BoardList = () => {
             </section>
             <div className="container-cards">
                 <h2>FINISH BOARDS</h2>
-                {boards.map(board =>
+                {boards.map(board => {
+                    if (board.userId === parseInt(sessionStorage.getItem("app_user_id"))) {
+                        return (
                     <BoardCard
                         key={board.id}
                         board={board}
-                        handleDeleteBoard={handleDeleteBoard}
-                    />)}
+                        handleDeleteBoard={handleDeleteBoard} />)} else {
+                            return false
+                        }})}
             </div>
         </>
     )
