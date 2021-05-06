@@ -41,7 +41,6 @@ export const BoardForm = () => {
                         }
                     })
                     setPaintResults(colorPaints)
-                    return colorPaints
                 })
         } else setPaintResults([])
     }

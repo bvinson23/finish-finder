@@ -157,74 +157,80 @@ export const BoardEditForm = () => {
                 </div>
                 <div className="everything-else">
                     <div className="selection-container">
-                        <div className="form-container">
-                            <h4>Choose a Paint:</h4>
-                            <div className="filter-dropdown">
-                                <label htmlFor="color">Color</label>
-                                <select value={paintSelection}
-                                    name="gencolorId"
-                                    id="gencolorId"
-                                    onChange={handlePaintColorSelection}
-                                    className="filter-control">
-                                    <option value="0">Select a color</option>
-                                    {colors.map(color => (
-                                        <option key={color.id} value={color.id}>
-                                            {color.name}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
+                        {!paint.name ?
+                            <>
+                                <div className="form-container">
+                                    <h4>Choose a Paint:</h4>
+                                    <div className="filter-dropdown">
+                                        <label htmlFor="color">Color</label>
+                                        <select value={paintSelection}
+                                            name="gencolorId"
+                                            id="gencolorId"
+                                            onChange={handlePaintColorSelection}
+                                            className="filter-control">
+                                            <option value="0">Select a color</option>
+                                            {colors.map(color => (
+                                                <option key={color.id} value={color.id}>
+                                                    {color.name}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                </div>
 
-                        <div className="preview-title">
-                            <h3>Preview Area</h3>
-                        </div>
-                        <div className="preview-area">
-                            <div className="filter-results">
-                                {paintResults.length === 0 ? <div></div> :
-                                    paintResults.map(selection =>
-                                        <PaintSelectionCard
-                                            key={selection.id}
-                                            selection={selection}
-                                            handleSelectPaint={handleSelectPaint}
-                                        />
-                                    )}
-                            </div>
-                        </div>
+                                <div className="preview-title">
+                                    <h3>Preview Area</h3>
+                                </div>
+                                <div className="preview-area">
+                                    <div className="filter-results">
+                                        {paintResults.length === 0 ? <div></div> :
+                                            paintResults.map(selection =>
+                                                <PaintSelectionCard
+                                                    key={selection.id}
+                                                    selection={selection}
+                                                    handleSelectPaint={handleSelectPaint}
+                                                />
+                                            )}
+                                    </div>
+                                </div> </> : <></>}
 
-                        <div className="form-container">
-                            <h4>Choose a Vinyl Base:</h4>
-                            <div className="filter-dropdown">
-                                <label htmlFor="color">Color</label>
-                                <select value={baseSelection}
-                                    name="gencolorId"
-                                    id="gencolorId"
-                                    onChange={handleBaseColorSelection}
-                                    className="filter-control">
-                                    <option value="0">Select a color</option>
-                                    {colors.map(color => (
-                                        <option key={color.id} value={color.id}>
-                                            {color.name}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
+                        {paint.name && !base.name ?
+                            <>
+                                <div className="form-container">
+                                    <h4>Choose a Vinyl Base:</h4>
+                                    <div className="filter-dropdown">
+                                        <label htmlFor="color">Color</label>
+                                        <select value={baseSelection}
+                                            name="gencolorId"
+                                            id="gencolorId"
+                                            onChange={handleBaseColorSelection}
+                                            className="filter-control">
+                                            <option value="0">Select a color</option>
+                                            {colors.map(color => (
+                                                <option key={color.id} value={color.id}>
+                                                    {color.name}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                </div>
 
-                        <div className="preview-title">
-                            <h3>Preview Area</h3>
-                        </div>
-                        <div className="filter-results">
-                            {baseResults.length === 0 ? <div></div> :
-                                baseResults.map(selection =>
-                                    <BaseSelectionCard
-                                        key={selection.id}
-                                        selection={selection}
-                                        handleSelectBase={handleSelectBase}
-                                    />
-                                )}
-                        </div>
+                                <div className="preview-title">
+                                    <h3>Preview Area</h3>
+                                </div>
+                                <div className="filter-results">
+                                    {baseResults.length === 0 ? <div></div> :
+                                        baseResults.map(selection =>
+                                            <BaseSelectionCard
+                                                key={selection.id}
+                                                selection={selection}
+                                                handleSelectBase={handleSelectBase}
+                                            />
+                                        )}
+                                </div></> : <></>}
 
+                                {base.name && !carpet.name ?
+                                <>
                         <div className="form-container">
                             <h4>Choose a Carpet:</h4>
                             <div className="filter-dropdown">
@@ -272,7 +278,7 @@ export const BoardEditForm = () => {
                                         handleSelectCarpet={handleSelectCarpet}
                                     />
                                 )}
-                        </div>
+                        </div> </> : <></>}
                     </div>
 
 
