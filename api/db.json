@@ -260,6 +260,50 @@
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620160893/Shaw-HandDrawn-Parchment_gvstcu.jpg",
       "price": 20,
       "styleId": 4
+    },
+    {
+      "id": 6,
+      "name": "Trace",
+      "colorName": "Cork",
+      "gencolorId": 11,
+      "genpriceId": 1,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620308728/5T005_83170_24x24_1_wskt3n.jpg",
+      "price": 18,
+      "styleId": 2
+    },
+    {
+      "id": 7,
+      "name": "Offset",
+      "colorName": "Glassy Green",
+      "gencolorId": 4,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620309057/5T296_94335_24x24_1_krgll0.jpg",
+      "price": 26,
+      "styleId": 2
+    },
+    {
+      "id": 8,
+      "name": "Plain Weave",
+      "colorName": "Annato",
+      "gencolorId": 1,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620309500/5T098_99880_24x24_1_fup8ba.jpg",
+      "price": 30,
+      "styleId": 4
+    },
+    {
+      "id": 9,
+      "name": "Reason",
+      "colorName": "Blueprint",
+      "gencolorId": 5,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620309500/5T098_99880_24x24_1_fup8ba.jpg",
+      "price": 20,
+      "styleId": 4
     }
   ],
   "gencolors": [
@@ -361,19 +405,11 @@
     },
     {
       "id": 7,
-      "name": "Finish Board Blah",
-      "paintId": 5,
+      "name": "Finish Board Blah 2",
+      "paintId": 19,
       "baseId": 2,
       "carpetId": 5,
       "userId": 2
-    },
-    {
-      "paintId": 6,
-      "carpetId": 4,
-      "baseId": 1,
-      "name": "Test 4",
-      "userId": 2,
-      "id": 8
     },
     {
       "paintId": 1,
@@ -398,6 +434,14 @@
       "name": "Board",
       "userId": 1,
       "id": 11
+    },
+    {
+      "id": 12,
+      "name": "New Board Baby 2",
+      "paintId": 16,
+      "baseId": 3,
+      "carpetId": 8,
+      "userId": 2
     }
   ],
   "pricepoints": [
