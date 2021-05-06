@@ -77,14 +77,18 @@ button {
     padding-right: 11rem;
 }
 
-img {
+fieldset img {
     object-fit: cover;
     max-height: 100%;
-    height: 200px;
+    height: 100px;
     width: 250px;
 }
 
 p {
     font-size: .8rem;
     padding-left: 1rem;
+}
+
+.selection__paint, .selection__base, .selection__carpet {
+    margin-top: -30px;
 }

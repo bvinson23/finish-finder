@@ -64,6 +64,9 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
                                 value={board.name} />
                         </div>
                     </fieldset>
+                    <Link to={"/"}>
+                        <button type="button" className="button-save" onClick={updateExistingBoard}> -Save Board- </button>
+                    </Link>
                     {!(paint.name?.length) > 0 ?
                         <fieldset>
                             <div className="selection__paint">
@@ -158,9 +161,6 @@ export const EditSelectionPreviewCard = ({ paint, base, carpet }) => {
                             </div>
                         </fieldset>
                     }
-                    <Link to={"/"}>
-                        <button type="button" className="button-save" onClick={updateExistingBoard}> -Save Board- </button>
-                    </Link>
                 </aside>
             </form>
         </>

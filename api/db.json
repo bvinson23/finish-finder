@@ -11,6 +11,11 @@
       "id": 2
     },
     {
+      "email": "luna@kitty.com",
+      "name": "Luna Vinson",
+      "id": 4
+    },
+    {
       "email": "olive@kitty.com",
       "name": "Olive Vinson",
       "id": 3
@@ -405,7 +410,7 @@
     },
     {
       "id": 7,
-      "name": "Finish Board Blah 3",
+      "name": "Finish Board 3",
       "paintId": 19,
       "baseId": 3,
       "carpetId": 5,
@@ -442,6 +447,14 @@
       "name": "Groove Life",
       "userId": 2,
       "id": 12
+    },
+    {
+      "paintId": 9,
+      "carpetId": 4,
+      "baseId": 3,
+      "name": "Happy",
+      "userId": 2,
+      "id": 13
     }
   ],
   "pricepoints": [

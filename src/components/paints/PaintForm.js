@@ -5,9 +5,9 @@ import { PaintSelectionCard } from "./PaintSelectionCard";
 
 export const PaintForm = () => {
     const [paint, setPaint] = useState({});
-    const [colors, setColors] = useState([]);
-    const [paintSelection, setPaintSelection] = useState({});
     const [paintResults, setPaintResults] = useState([]);
+    const [paintSelection, setPaintSelection] = useState({});
+    const [colors, setColors] = useState([]);
 
     const handlePaintColorSelection = (evt) => {
         let selectionChange = parseInt(evt.target.value)

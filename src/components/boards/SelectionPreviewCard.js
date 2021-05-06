@@ -68,6 +68,9 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                             value={board.name} />
                     </div>
                 </fieldset>
+                <Link to={"/"}>
+                    <button type="button" className="button-save" onClick={handleClickSaveBoard}> -Save Board- </button>
+                </Link>
                 <fieldset>
                     <div className="selection__paint">
                         <select
@@ -112,9 +115,6 @@ export const SelectionPreviewCard = ({ paint, base, carpet }) => {
                         </div>
                     </div>
                 </fieldset>
-                <Link to={"/"}>
-                    <button type="button" className="button-save" onClick={handleClickSaveBoard}> -Save Board- </button>
-                </Link>
             </aside>
         </form>
     )
