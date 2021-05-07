@@ -378,7 +378,7 @@
   "boards": [
     {
       "id": 1,
-      "name": "Finish Board 20",
+      "name": "Live Nation",
       "paintId": 5,
       "baseId": 3,
       "carpetId": 4,
@@ -410,7 +410,7 @@
     },
     {
       "id": 7,
-      "name": "Finish Board 3",
+      "name": "Off the Dock",
       "paintId": 19,
       "baseId": 3,
       "carpetId": 5,
