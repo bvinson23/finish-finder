@@ -309,6 +309,237 @@
       "image": "https://res.cloudinary.com/finishfinder/image/upload/v1620314463/I0459_00450_MAIN_yeiolf.jpg",
       "price": 20,
       "styleId": 4
+    },
+    {
+      "id": 10,
+      "name": "Gradient",
+      "colorName": "Straw",
+      "gencolorId": 11,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266405/Shaw_Gradient_Straw_e5omzi.jpg",
+      "price": 20,
+      "styleId": 1
+    },
+    {
+      "id": 11,
+      "name": "Gradient",
+      "colorName": "Ceramic Glaze",
+      "gencolorId": 11,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266360/Shaw_Gradient_Ceramic_Glaze_pundnb.jpg",
+      "price": 20,
+      "styleId": 1
+    },
+    {
+      "id": 12,
+      "name": "Gradient",
+      "colorName": "French Silver",
+      "gencolorId": 9,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266386/Shaw_Gradient_French_Silver_ppradx.jpg",
+      "price": 20,
+      "styleId": 1
+    },
+    {
+      "id": 13,
+      "name": "Gradient",
+      "colorName": "Adrift",
+      "gencolorId": 9,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266381/Shaw_Gradient_Adrift_wcdplb.jpg",
+      "price": 20,
+      "styleId": 1
+    },
+    {
+      "id": 14,
+      "name": "Gradient",
+      "colorName": "Char Brown",
+      "gencolorId": 8,
+      "genpriceId": 2,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266370/Shaw_Gradient_Char_Brown_r7cnhl.jpg",
+      "price": 20,
+      "styleId": 1
+    },
+    {
+      "id": 15,
+      "name": "Structure",
+      "colorName": "Shimmery Blue",
+      "gencolorId": 5,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266429/Shaw_Structure_Shimmery_Blue_gnrlcv.jpg",
+      "price": 26,
+      "styleId": 3
+    },
+    {
+      "id": 16,
+      "name": "Structure",
+      "colorName": "Chrome Black",
+      "gencolorId": 7,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266425/Shaw_Structure_Chrome_Black_tvpumv.jpg",
+      "price": 26,
+      "styleId": 3
+    },
+    {
+      "id": 17,
+      "name": "Structure",
+      "colorName": "Steel Grey",
+      "gencolorId": 9,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266428/Shaw_Structure_Steel_Grey_kv88vz.jpg",
+      "price": 26,
+      "styleId": 3
+    },
+    {
+      "id": 18,
+      "name": "Arrange",
+      "colorName": "Mountain View",
+      "gencolorId": 4,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266338/Shaw_Arrange_Mountain_View_m0dpfm.jpg",
+      "price": 26,
+      "styleId": 2
+    },
+    {
+      "id": 19,
+      "name": "Arrange",
+      "colorName": "Metallic Beige",
+      "gencolorId": 11,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266294/Shaw_Arrange_Metallic_Beige_tvqsxb.jpg",
+      "price": 26,
+      "styleId": 2
+    },
+    {
+      "id": 20,
+      "name": "Arrange",
+      "colorName": "Sterling Silver",
+      "gencolorId": 9,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266315/Shaw_Arrange_Sterling_Silver_l8sh4h.jpg",
+      "price": 26,
+      "styleId": 2
+    },
+    {
+      "id": 21,
+      "name": "Enclave",
+      "colorName": "Flora",
+      "gencolorId": 6,
+      "genpriceId": 4,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266351/Shaw_Enclave_Flora_sqef4t.jpg",
+      "price": 32,
+      "styleId": 3
+    },
+    {
+      "id": 22,
+      "name": "Enclave",
+      "colorName": "Earth",
+      "gencolorId": 3,
+      "genpriceId": 4,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266348/Shaw_Enclave_Earth_swaalq.jpg",
+      "price": 32,
+      "styleId": 3
+    },
+    {
+      "id": 23,
+      "name": "Enclave",
+      "colorName": "Reservoir",
+      "gencolorId": 5,
+      "genpriceId": 4,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266333/Shaw_Enclave_Reservoir_uz8v3e.jpg",
+      "price": 32,
+      "styleId": 3
+    },
+    {
+      "id": 24,
+      "name": "Enclave",
+      "colorName": "Reef",
+      "gencolorId": 1,
+      "genpriceId": 4,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266324/Shaw_Enclave_Reef_ldblhg.jpg",
+      "price": 32,
+      "styleId": 3
+    },
+    {
+      "id": 25,
+      "name": "Current",
+      "colorName": "Iron Soil",
+      "gencolorId": 2,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266252/Shaw_Current_Iron_Soil_duar46.jpg",
+      "price": 30,
+      "styleId": 2
+    },
+    {
+      "id": 26,
+      "name": "Current",
+      "colorName": "Floating Water",
+      "gencolorId": 5,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "",
+      "price": 30,
+      "styleId": 2
+    },
+    {
+      "id": 27,
+      "name": "Current",
+      "colorName": "Floating Water",
+      "gencolorId": 5,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266286/Shaw_Current_Floating_Water_j1cptw.jpg",
+      "price": 30,
+      "styleId": 2
+    },
+    {
+      "id": 28,
+      "name": "Current",
+      "colorName": "Carbon Atmosphere",
+      "gencolorId": 5,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266246/Shaw_Current_Carbon_Atmosphere_ijo7ro.jpg",
+      "price": 30,
+      "styleId": 2
+    },
+    {
+      "id": 29,
+      "name": "Current",
+      "colorName": "Desert Clay",
+      "gencolorId": 2,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266278/Shaw_Current_Desert_Clay_gg7fzx.jpg",
+      "price": 30,
+      "styleId": 2
+    },
+    {
+      "id": 30,
+      "name": "Current",
+      "colorName": "Weathered Amazon",
+      "gencolorId": 4,
+      "genpriceId": 3,
+      "brand": "Shaw",
+      "image": "https://res.cloudinary.com/finishfinder/image/upload/v1621266294/Shaw_Current_Weathered_Amazon_fhvlo2.jpg",
+      "price": 30,
+      "styleId": 2
     }
   ],
   "gencolors": [
@@ -388,8 +619,8 @@
       "id": 2,
       "name": "Finish Board 2",
       "paintId": 2,
-      "carpetId": 2,
       "baseId": 2,
+      "carpetId": 2,
       "userId": 1
     },
     {
@@ -412,7 +643,7 @@
       "id": 7,
       "name": "Off the Dock",
       "paintId": 19,
-      "baseId": 3,
+      "baseId": 1,
       "carpetId": 5,
       "userId": 2
     },
@@ -433,14 +664,6 @@
       "id": 10
     },
     {
-      "paintId": 4,
-      "carpetId": 4,
-      "baseId": 3,
-      "name": "Board",
-      "userId": 1,
-      "id": 11
-    },
-    {
       "paintId": 11,
       "carpetId": 1,
       "baseId": 3,
@@ -449,20 +672,20 @@
       "id": 12
     },
     {
-      "paintId": 9,
-      "carpetId": 4,
-      "baseId": 3,
-      "name": "Happy",
-      "userId": 2,
-      "id": 13
-    },
-    {
       "id": 14,
-      "name": "My Board",
+      "name": "Bridgestone",
       "paintId": 17,
-      "baseId": 3,
+      "baseId": 1,
       "carpetId": 6,
       "userId": 2
+    },
+    {
+      "paintId": 11,
+      "carpetId": 23,
+      "baseId": 3,
+      "name": "New Carpets!",
+      "userId": 1,
+      "id": 15
     }
   ],
   "pricepoints": [
